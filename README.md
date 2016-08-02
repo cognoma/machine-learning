@@ -6,7 +6,7 @@ This repository hosts machine learning code and discussion (see [Issues](https:/
 
 This repository uses [conda](http://conda.pydata.org/docs/ "Conda package management system and environment management system documentation") to manage its environment and install packages. If you don't have conda installed on your system, you can [download it here](http://conda.pydata.org/miniconda.html "Miniconda Homepage"). You can install the Python 2 or 3 version of Miniconda (or Anaconda), which determines the Python version of your root environment. Since we create a dedicated environment for this project, named `cognoma-machine-learning` whose explicit dependencies are specified in [`environment.yml`](environment.yml), the version of your root environment will not be relevant.
 
-With conda, you can create the `cognoma-machine-learning` environment using:
+With conda, you can create the `cognoma-machine-learning` environment by running the following from the root directory of this repository:
 
 ```sh
 # Create or overwrite the cognoma-machine-learning conda environment
