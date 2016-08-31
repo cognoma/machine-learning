@@ -2,5 +2,4 @@
 .ipynb_checkpoints
 
 # Large downloaded data files
-data/expression.tsv.bz2
-data/mutation-matrix.tsv.bz2
+download/
