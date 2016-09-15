@@ -13,4 +13,10 @@ With conda, you can create the `cognoma-machine-learning` environment by running
 conda env create --quiet --force --file environment.yml
 ```
 
+If `environment.yml` has changed since you created the environment, run the following update command:
+
+```sh
+conda env update --file environment.yml
+```
+
 Activate the environment by running `source activate cognoma-machine-learning` on Linux or OS X and `activate cognoma-machine-learning` on Windows. Once this environment is active in a terminal, run `jupyter notebook` to start a notebook server.
