@@ -22,9 +22,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn import preprocessing, grid_search
+from sklearn import preprocessing
 from sklearn.linear_model import SGDClassifier
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import roc_auc_score, roc_curve
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
@@ -111,17 +111,17 @@ param_grid = {
 
 # In[9]:
 
-get_ipython().run_cell_magic('time', '', "path = os.path.join('data', 'expression-matrix.tsv.bz2')\nX = pd.read_table(path, index_col=0)")
+get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'expression-matrix.tsv.bz2')\nX = pd.read_table(path, index_col=0)")
 
 
 # In[10]:
 
-get_ipython().run_cell_magic('time', '', "path = os.path.join('data', 'mutation-matrix.tsv.bz2')\nY = pd.read_table(path, index_col=0)")
+get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'mutation-matrix.tsv.bz2')\nY = pd.read_table(path, index_col=0)")
 
 
 # In[11]:
 
-get_ipython().run_cell_magic('time', '', "path = os.path.join('data', 'samples.tsv')\nclinical = pd.read_table(path, index_col=0)")
+get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'samples.tsv')\nclinical = pd.read_table(path, index_col=0)")
 
 
 # In[12]:
@@ -269,7 +269,7 @@ clf = SGDClassifier(random_state=0, class_weight='balanced',
 # joblib is used to cross-validate in parallel by setting `n_jobs=-1` in GridSearchCV
 # Supress joblib warning. See https://github.com/scikit-learn/scikit-learn/issues/6370
 warnings.filterwarnings('ignore', message='Changing the shape of non-C contiguous array')
-clf_grid = grid_search.GridSearchCV(estimator=clf, param_grid=param_grid, n_jobs=-1, scoring='roc_auc')
+clf_grid = GridSearchCV(estimator=clf, param_grid=param_grid, n_jobs=-1, scoring='roc_auc')
 pipeline = make_pipeline(
     feature_select,  # Feature selection
     StandardScaler(),  # Feature scaling
@@ -315,22 +315,17 @@ def grid_scores_to_df(grid_scores):
 
 # In[33]:
 
-cv_score_df = grid_scores_to_df(clf_grid.grid_scores_)
-cv_score_df.head(2)
+cv_result_df = pd.concat([
+    pd.DataFrame(clf_grid.cv_results_),
+    pd.DataFrame.from_records(clf_grid.cv_results_['params']),
+], axis='columns')
+cv_result_df.head(2)
 
 
 # In[34]:
 
-# Cross-validated performance distribution
-facet_grid = sns.factorplot(x='l1_ratio', y='score', col='alpha',
-    data=cv_score_df, kind='violin', size=4, aspect=1)
-facet_grid.set_ylabels('AUROC');
-
-
-# In[35]:
-
 # Cross-validated performance heatmap
-cv_score_mat = pd.pivot_table(cv_score_df, values='score', index='l1_ratio', columns='alpha')
+cv_score_mat = pd.pivot_table(cv_result_df, values='mean_test_score', index='l1_ratio', columns='alpha')
 ax = sns.heatmap(cv_score_mat, annot=True, fmt='.2%')
 ax.set_xlabel('Regularization strength multiplier (alpha)')
 ax.set_ylabel('Elastic net mixing parameter (l1_ratio)');
@@ -338,7 +333,7 @@ ax.set_ylabel('Elastic net mixing parameter (l1_ratio)');
 
 # ## Use Optimal Hyperparameters to Output ROC Curve
 
-# In[36]:
+# In[35]:
 
 y_pred_train = pipeline.decision_function(X_train)
 y_pred_test = pipeline.decision_function(X_test)
@@ -354,7 +349,7 @@ metrics_train = get_threshold_metrics(y_train, y_pred_train)
 metrics_test = get_threshold_metrics(y_test, y_pred_test)
 
 
-# In[37]:
+# In[36]:
 
 # Plot ROC
 plt.figure()
@@ -372,7 +367,7 @@ plt.legend(loc='lower right');
 
 # ## Tissue specific performance
 
-# In[38]:
+# In[37]:
 
 tissue_metrics = {}
 for tissue in clinical_sub.disease.unique():
@@ -389,7 +384,7 @@ for tissue in clinical_sub.disease.unique():
     tissue_metrics[tissue] = [metrics_train, metrics_test]
 
 
-# In[39]:
+# In[38]:
 
 tissue_auroc = {}
 plt.figure()
@@ -412,13 +407,13 @@ for tissue, metrics_val in tissue_metrics.items():
     plt.show()
 
 
-# In[40]:
+# In[39]:
 
 tissue_results = pd.DataFrame(tissue_auroc, index=['Train', 'Test']).T
 tissue_results = tissue_results.sort_values('Test', ascending=False)
 
 
-# In[41]:
+# In[40]:
 
 ax = tissue_results.plot(kind='bar', title='Tissue Specific Prediction of Hippo Signaling')
 ax.set_ylabel('AUROC');
@@ -428,14 +423,14 @@ ax.set_ylabel('AUROC');
 
 # ## What are the classifier coefficients?
 
-# In[42]:
+# In[41]:
 
 coef_df = pd.DataFrame(best_clf.coef_.transpose(), index=X_sub.columns[feature_mask], columns=['weight'])
 coef_df['abs'] = coef_df['weight'].abs()
 coef_df = coef_df.sort_values('abs', ascending=False)
 
 
-# In[43]:
+# In[42]:
 
 '{:.1%} zero coefficients; {:,} negative and {:,} positive coefficients'.format(
     (coef_df.weight == 0).mean(),
@@ -444,7 +439,7 @@ coef_df = coef_df.sort_values('abs', ascending=False)
 )
 
 
-# In[44]:
+# In[43]:
 
 coef_df.head(10)
 
@@ -468,7 +463,7 @@ coef_df.head(10)
 
 # ## Investigate the predictions
 
-# In[45]:
+# In[44]:
 
 predict_df = pd.DataFrame.from_items([
     ('sample_id', X_sub.index),
@@ -480,13 +475,13 @@ predict_df = pd.DataFrame.from_items([
 predict_df['probability_str'] = predict_df['probability'].apply('{:.1%}'.format)
 
 
-# In[46]:
+# In[45]:
 
 # Top predictions amongst negatives (potential hidden responders)
 predict_df.sort_values('decision_function', ascending=False).query("status == 0").head(10)
 
 
-# In[47]:
+# In[46]:
 
 # Ignore numpy warning caused by seaborn
 warnings.filterwarnings('ignore', 'using a non-integer number instead of an integer')
@@ -495,7 +490,7 @@ ax = sns.distplot(predict_df.query("status == 0").decision_function, hist=False,
 ax = sns.distplot(predict_df.query("status == 1").decision_function, hist=False, label='Positives')
 
 
-# In[48]:
+# In[47]:
 
 ax = sns.distplot(predict_df.query("status == 0").probability, hist=False, label='Negatives')
 ax = sns.distplot(predict_df.query("status == 1").probability, hist=False, label='Positives')

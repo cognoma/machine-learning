@@ -14,9 +14,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn import preprocessing, grid_search
+from sklearn import preprocessing
 from sklearn.linear_model import SGDClassifier
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import roc_auc_score, roc_curve
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
@@ -120,7 +120,7 @@ clf = SGDClassifier(random_state=0, class_weight='balanced',
 # joblib is used to cross-validate in parallel by setting `n_jobs=-1` in GridSearchCV
 # Supress joblib warning. See https://github.com/scikit-learn/scikit-learn/issues/6370
 warnings.filterwarnings('ignore', message='Changing the shape of non-C contiguous array')
-clf_grid = grid_search.GridSearchCV(estimator=clf, param_grid=param_grid, n_jobs=-1, scoring='roc_auc')
+clf_grid = GridSearchCV(estimator=clf, param_grid=param_grid, n_jobs=-1, scoring='roc_auc')
 pipeline = make_pipeline(
     feature_select,  # Feature selection
     StandardScaler(),  # Feature scaling
@@ -146,42 +146,17 @@ best_clf
 
 # In[16]:
 
-def grid_scores_to_df(grid_scores):
-    """
-    Convert a sklearn.grid_search.GridSearchCV.grid_scores_ attribute to 
-    a tidy pandas DataFrame where each row is a hyperparameter-fold combinatination.
-    """
-    rows = list()
-    for grid_score in grid_scores:
-        for fold, score in enumerate(grid_score.cv_validation_scores):
-            row = grid_score.parameters.copy()
-            row['fold'] = fold
-            row['score'] = score
-            rows.append(row)
-    df = pd.DataFrame(rows)
-    return df
+cv_result_df = pd.concat([
+    pd.DataFrame(clf_grid.cv_results_),
+    pd.DataFrame.from_records(clf_grid.cv_results_['params']),
+], axis='columns')
+cv_result_df.head(2)
 
-
-# ## Process Mutation Matrix
 
 # In[17]:
 
-cv_score_df = grid_scores_to_df(clf_grid.grid_scores_)
-cv_score_df.head(2)
-
-
-# In[18]:
-
-# Cross-validated performance distribution
-facet_grid = sns.factorplot(x='l1_ratio', y='score', col='alpha',
-    data=cv_score_df, kind='violin', size=4, aspect=1)
-facet_grid.set_ylabels('AUROC');
-
-
-# In[19]:
-
 # Cross-validated performance heatmap
-cv_score_mat = pd.pivot_table(cv_score_df, values='score', index='l1_ratio', columns='alpha')
+cv_score_mat = pd.pivot_table(cv_result_df, values='mean_test_score', index='l1_ratio', columns='alpha')
 ax = sns.heatmap(cv_score_mat, annot=True, fmt='.1%')
 ax.set_xlabel('Regularization strength multiplier (alpha)')
 ax.set_ylabel('Elastic net mixing parameter (l1_ratio)');
@@ -189,7 +164,7 @@ ax.set_ylabel('Elastic net mixing parameter (l1_ratio)');
 
 # ## Use Optimal Hyperparameters to Output ROC Curve
 
-# In[20]:
+# In[18]:
 
 y_pred_train = pipeline.decision_function(X_train)
 y_pred_test = pipeline.decision_function(X_test)
@@ -205,7 +180,7 @@ metrics_train = get_threshold_metrics(y_train, y_pred_train)
 metrics_test = get_threshold_metrics(y_test, y_pred_test)
 
 
-# In[21]:
+# In[19]:
 
 # Plot ROC
 plt.figure()
@@ -223,14 +198,14 @@ plt.legend(loc='lower right');
 
 # ## What are the classifier coefficients?
 
-# In[22]:
+# In[20]:
 
 coef_df = pd.DataFrame(best_clf.coef_.transpose(), index=X.columns[feature_mask], columns=['weight'])
 coef_df['abs'] = coef_df['weight'].abs()
 coef_df = coef_df.sort_values('abs', ascending=False)
 
 
-# In[23]:
+# In[21]:
 
 '{:.1%} zero coefficients; {:,} negative and {:,} positive coefficients'.format(
     (coef_df.weight == 0).mean(),
@@ -239,7 +214,7 @@ coef_df = coef_df.sort_values('abs', ascending=False)
 )
 
 
-# In[24]:
+# In[22]:
 
 coef_df.head(10)
 
@@ -253,7 +228,7 @@ coef_df.head(10)
 
 # ## Investigate the predictions
 
-# In[25]:
+# In[23]:
 
 predict_df = pd.DataFrame.from_items([
     ('sample_id', X.index),
@@ -265,13 +240,13 @@ predict_df = pd.DataFrame.from_items([
 predict_df['probability_str'] = predict_df['probability'].apply('{:.1%}'.format)
 
 
-# In[26]:
+# In[24]:
 
 # Top predictions amongst negatives (potential hidden responders)
 predict_df.sort_values('decision_function', ascending=False).query("status == 0").head(10)
 
 
-# In[27]:
+# In[25]:
 
 # Ignore numpy warning caused by seaborn
 warnings.filterwarnings('ignore', 'using a non-integer number instead of an integer')
@@ -280,7 +255,7 @@ ax = sns.distplot(predict_df.query("status == 0").decision_function, hist=False,
 ax = sns.distplot(predict_df.query("status == 1").decision_function, hist=False, label='Positives')
 
 
-# In[28]:
+# In[26]:
 
 ax = sns.distplot(predict_df.query("status == 0").probability, hist=False, label='Negatives')
 ax = sns.distplot(predict_df.query("status == 1").probability, hist=False, label='Positives')
