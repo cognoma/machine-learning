@@ -26,7 +26,7 @@ from sklearn import preprocessing
 from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import roc_auc_score, roc_curve
-from sklearn.pipeline import make_pipeline
+from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import SelectKBest
 from statsmodels.robust.scale import mad
@@ -91,51 +91,35 @@ classifier_genes_df['entrez_gene_id'] = classifier_genes_df['entrez_gene_id'].as
 classifier_genes_df
 
 
-# In[8]:
-
-# Parameter Sweep for Hyperparameters
-n_feature_kept = 8000
-param_fixed = {
-    'loss': 'log',
-    'penalty': 'elasticnet',
-}
-param_grid = {
-    'alpha': [10 ** x for x in range(-6, 1)],
-    'l1_ratio': [0, 0.05, 0.1, 0.2, 0.5, 0.8, 0.9, 0.95, 1],
-}
-
-
-# *Here is some [documentation](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html) regarding the classifier and hyperparameters*
-
 # ## Load Data
 
-# In[9]:
+# In[8]:
 
 get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'expression-matrix.tsv.bz2')\nX = pd.read_table(path, index_col=0)")
 
 
-# In[10]:
+# In[9]:
 
 get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'mutation-matrix.tsv.bz2')\nY = pd.read_table(path, index_col=0)")
 
 
-# In[11]:
+# In[10]:
 
 get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'samples.tsv')\nclinical = pd.read_table(path, index_col=0)")
 
 
-# In[12]:
+# In[11]:
 
 clinical.tail(5)
 
 
-# In[13]:
+# In[12]:
 
 # Subset the Y matrix to only the genes to be classified
 y_full = Y[classifier_genes_df['entrez_gene_id']]
 
 
-# In[14]:
+# In[13]:
 
 y_full.columns = classifier_genes_df['gene_symbol']
 y_full = y_full.assign(disease = clinical['disease'])
@@ -144,14 +128,14 @@ y_full = y_full.assign(disease = clinical['disease'])
 y = y_full.assign(indicator = y_full.max(axis=1))
 
 
-# In[15]:
+# In[14]:
 
 unique_pos = y.groupby('disease').apply(lambda x: x['indicator'].sum())
 heatmap_df = y_full.groupby('disease').sum().assign(TOTAL = unique_pos)
 heatmap_df = heatmap_df.divide(y_full.disease.value_counts(sort=False).sort_index(), axis=0)
 
 
-# In[16]:
+# In[15]:
 
 # What is the percentage of different mutations across different cancer types?
 sns.heatmap(heatmap_df);
@@ -161,7 +145,7 @@ sns.heatmap(heatmap_df);
 # 
 # Looking closer at the plots above, it is evident that several tissues do not demonstrate aberrations (at least at the mutation level) in Hippo signaling. Specifically, it appears that cancers with gender specificity like testicular cancer and and prostate cancer are _not_ impacted. Therefore, because of this artificial imbalance, if Cognoma were to include these cancers in the classifier, it **will** key in on gender specific signal (i.e. genes that are only on the Y chromosome, or X inactivation genes).  
 
-# In[17]:
+# In[16]:
 
 # How many samples in each tissue that have Hippo signaling aberrations
 ind = ['Negatives', 'Positives', 'Positive Prop']
@@ -176,7 +160,7 @@ tissue_summary_df
 # 
 # This is a crucial step that is different from previous classifiers
 
-# In[18]:
+# In[17]:
 
 # Technically, these are hyper parameters, but for simplicity, set here
 filter_prop = 0.10
@@ -188,26 +172,26 @@ tissue_count_decision = tissue_summary_df['Positives'] >= filter_count
 tissue_decision = tissue_prop_decision & tissue_count_decision
 
 
-# In[19]:
+# In[18]:
 
 # This criteria filters out the following tissues
 pd.Series(tissue_summary_df.index[~tissue_decision].sort_values())
 
 
-# In[20]:
+# In[19]:
 
 # What are the tissues remaining?
 tissue_summary_df = tissue_summary_df[tissue_decision]
 tissue_summary_df
 
 
-# In[21]:
+# In[20]:
 
 # Distribution of mutation counts after filtering
 sns.heatmap(heatmap_df.loc[tissue_decision]);
 
 
-# In[22]:
+# In[21]:
 
 # Subset data
 clinical_sub = clinical[clinical['disease'].isin(tissue_summary_df.index)]
@@ -215,26 +199,26 @@ X_sub = X.ix[clinical_sub.index]
 y_sub = y['indicator'].ix[clinical_sub.index]
 
 
-# In[23]:
+# In[22]:
 
 # Total distribution of positives/negatives
 y_sub.value_counts(True)
 
 
-# In[24]:
+# In[23]:
 
 y_sub.head(7)
 
 
 # ## Set aside 10% of the data for testing
 
-# In[25]:
+# In[24]:
 
 strat = clinical_sub['disease'].str.cat(y_sub.astype(str))
 strat.head(6)
 
 
-# In[26]:
+# In[25]:
 
 # Make sure the splits have equal tissue and label partitions
 X_train, X_test, y_train, y_test = train_test_split(X_sub, y_sub, test_size=0.1, random_state=0,
@@ -245,7 +229,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_sub, y_sub, test_size=0.1,
 
 # ## Median absolute deviation feature selection
 
-# In[27]:
+# In[26]:
 
 def fs_mad(x, y):
     """    
@@ -254,78 +238,58 @@ def fs_mad(x, y):
     scores = mad(x) 
     return scores, np.array([np.NaN]*len(scores))
 
-# select the top features with the highest MAD
-feature_select = SelectKBest(fs_mad, k=n_feature_kept)
-
 
 # ## Define pipeline and Cross validation model fitting
 
+# In[27]:
+
+# Parameter Sweep for Hyperparameters
+param_grid = {
+    'select__k': [8000],
+    'classify__loss': ['log'],
+    'classify__penalty': ['elasticnet'],
+    'classify__alpha': [10 ** x for x in range(-3, 1)],
+    'classify__l1_ratio': [0, 0.2, 0.8, 1],
+}
+
+pipeline = Pipeline(steps=[
+    ('select', SelectKBest(fs_mad)),
+    ('standardize', StandardScaler()),
+    ('classify', SGDClassifier(random_state=0, class_weight='balanced'))
+])
+
+cv_pipeline = GridSearchCV(estimator=pipeline, param_grid=param_grid, n_jobs=-1, scoring='roc_auc')
+
+
 # In[28]:
 
-# Include loss='log' in param_grid doesn't work with pipeline somehow
-clf = SGDClassifier(random_state=0, class_weight='balanced',
-                    loss=param_fixed['loss'], penalty=param_fixed['penalty'])
-
-# joblib is used to cross-validate in parallel by setting `n_jobs=-1` in GridSearchCV
-# Supress joblib warning. See https://github.com/scikit-learn/scikit-learn/issues/6370
-warnings.filterwarnings('ignore', message='Changing the shape of non-C contiguous array')
-clf_grid = GridSearchCV(estimator=clf, param_grid=param_grid, n_jobs=-1, scoring='roc_auc')
-pipeline = make_pipeline(
-    feature_select,  # Feature selection
-    StandardScaler(),  # Feature scaling
-    clf_grid)
+get_ipython().run_cell_magic('time', '', 'cv_pipeline.fit(X=X_train, y=y_train);')
 
 
 # In[29]:
 
-get_ipython().run_cell_magic('time', '', '# Fit the model (the computationally intensive part)\npipeline.fit(X=X_train, y=y_train)\nbest_clf = clf_grid.best_estimator_\nfeature_mask = feature_select.get_support()  # Get a boolean array indicating the selected features')
+# Best Params
+print('{:.3%}'.format(cv_pipeline.best_score_))
 
-
-# In[30]:
-
-clf_grid.best_params_
-
-
-# In[31]:
-
-best_clf
+# Best Params
+cv_pipeline.best_params_
 
 
 # ## Visualize hyperparameters performance
 
-# In[32]:
-
-def grid_scores_to_df(grid_scores):
-    """
-    Convert a sklearn.grid_search.GridSearchCV.grid_scores_ attribute to 
-    a tidy pandas DataFrame where each row is a hyperparameter-fold combinatination.
-    """
-    rows = list()
-    for grid_score in grid_scores:
-        for fold, score in enumerate(grid_score.cv_validation_scores):
-            row = grid_score.parameters.copy()
-            row['fold'] = fold
-            row['score'] = score
-            rows.append(row)
-    df = pd.DataFrame(rows)
-    return df
-
-
-# ## Process Mutation Matrix
-
-# In[33]:
+# In[30]:
 
 cv_result_df = pd.concat([
-    pd.DataFrame(clf_grid.cv_results_),
-    pd.DataFrame.from_records(clf_grid.cv_results_['params']),
+    pd.DataFrame(cv_pipeline.cv_results_),
+    pd.DataFrame.from_records(cv_pipeline.cv_results_['params']),
 ], axis='columns')
 cv_result_df.head(2)
 
 
-# In[34]:
+# In[31]:
 
 # Cross-validated performance heatmap
-cv_score_mat = pd.pivot_table(cv_result_df, values='mean_test_score', index='l1_ratio', columns='alpha')
+cv_score_mat = pd.pivot_table(cv_result_df, values='mean_test_score', index='classify__l1_ratio', columns='classify__alpha')
 ax = sns.heatmap(cv_score_mat, annot=True, fmt='.2%')
 ax.set_xlabel('Regularization strength multiplier (alpha)')
 ax.set_ylabel('Elastic net mixing parameter (l1_ratio)');
@@ -333,10 +297,10 @@ ax.set_ylabel('Elastic net mixing parameter (l1_ratio)');
 
 # ## Use Optimal Hyperparameters to Output ROC Curve
 
-# In[35]:
+# In[32]:
 
-y_pred_train = pipeline.decision_function(X_train)
-y_pred_test = pipeline.decision_function(X_test)
+y_pred_train = cv_pipeline.decision_function(X_train)
+y_pred_test = cv_pipeline.decision_function(X_test)
 
 def get_threshold_metrics(y_true, y_pred, tissue='all'):
     roc_columns = ['fpr', 'tpr', 'threshold']
@@ -349,7 +313,7 @@ metrics_train = get_threshold_metrics(y_train, y_pred_train)
 metrics_test = get_threshold_metrics(y_test, y_pred_test)
 
 
-# In[36]:
+# In[33]:
 
 # Plot ROC
 plt.figure()
@@ -367,7 +331,7 @@ plt.legend(loc='lower right');
 
 # ## Tissue specific performance
 
-# In[37]:
+# In[34]:
 
 tissue_metrics = {}
 for tissue in clinical_sub.disease.unique():
@@ -384,7 +348,7 @@ for tissue in clinical_sub.disease.unique():
     tissue_metrics[tissue] = [metrics_train, metrics_test]
 
 
-# In[38]:
+# In[35]:
 
 tissue_auroc = {}
 plt.figure()
@@ -407,13 +371,13 @@ for tissue, metrics_val in tissue_metrics.items():
     plt.show()
 
 
-# In[39]:
+# In[36]:
 
 tissue_results = pd.DataFrame(tissue_auroc, index=['Train', 'Test']).T
 tissue_results = tissue_results.sort_values('Test', ascending=False)
 
 
-# In[40]:
+# In[37]:
 
 ax = tissue_results.plot(kind='bar', title='Tissue Specific Prediction of Hippo Signaling')
 ax.set_ylabel('AUROC');
@@ -423,14 +387,28 @@ ax.set_ylabel('AUROC');
 
 # ## What are the classifier coefficients?
 
-# In[41]:
+# In[38]:
 
-coef_df = pd.DataFrame(best_clf.coef_.transpose(), index=X_sub.columns[feature_mask], columns=['weight'])
+final_pipeline = cv_pipeline.best_estimator_
+final_classifier = final_pipeline.named_steps['classify']
+
+
+# In[39]:
+
+select_indices = final_pipeline.named_steps['select'].transform(
+    np.arange(len(X.columns)).reshape(1, -1)
+).tolist()
+
+coef_df = pd.DataFrame.from_items([
+    ('feature', X.columns[select_indices]),
+    ('weight', final_classifier.coef_[0]),
+])
+
 coef_df['abs'] = coef_df['weight'].abs()
 coef_df = coef_df.sort_values('abs', ascending=False)
 
 
-# In[42]:
+# In[40]:
 
 '{:.1%} zero coefficients; {:,} negative and {:,} positive coefficients'.format(
     (coef_df.weight == 0).mean(),
@@ -439,7 +417,7 @@ coef_df = coef_df.sort_values('abs', ascending=False)
 )
 
 
-# In[43]:
+# In[41]:
 
 coef_df.head(10)
 
@@ -463,25 +441,25 @@ coef_df.head(10)
 
 # ## Investigate the predictions
 
-# In[44]:
+# In[42]:
 
 predict_df = pd.DataFrame.from_items([
     ('sample_id', X_sub.index),
     ('testing', X_sub.index.isin(X_test.index).astype(int)),
     ('status', y_sub),
-    ('decision_function', pipeline.decision_function(X_sub)),
-    ('probability', pipeline.predict_proba(X_sub)[:, 1]),
+    ('decision_function', cv_pipeline.decision_function(X_sub)),
+    ('probability', cv_pipeline.predict_proba(X_sub)[:, 1]),
 ])
 predict_df['probability_str'] = predict_df['probability'].apply('{:.1%}'.format)
 
 
-# In[45]:
+# In[43]:
 
 # Top predictions amongst negatives (potential hidden responders)
 predict_df.sort_values('decision_function', ascending=False).query("status == 0").head(10)
 
 
-# In[46]:
+# In[44]:
 
 # Ignore numpy warning caused by seaborn
 warnings.filterwarnings('ignore', 'using a non-integer number instead of an integer')
@@ -490,7 +468,7 @@ ax = sns.distplot(predict_df.query("status == 0").decision_function, hist=False,
 ax = sns.distplot(predict_df.query("status == 1").decision_function, hist=False, label='Positives')
 
 
-# In[47]:
+# In[45]:
 
 ax = sns.distplot(predict_df.query("status == 0").probability, hist=False, label='Negatives')
 ax = sns.distplot(predict_df.query("status == 1").probability, hist=False, label='Positives')
