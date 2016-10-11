@@ -3,3 +3,7 @@
 
 # Large downloaded data files
 download/
+
+# Python
+__pycache__/
+*.egg-info/

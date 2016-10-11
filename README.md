@@ -20,3 +20,11 @@ conda env update --file environment.yml
 ```
 
 Activate the environment by running `source activate cognoma-machine-learning` on Linux or OS X and `activate cognoma-machine-learning` on Windows. Once this environment is active in a terminal, run `jupyter notebook` to start a notebook server.
+
+## `cognoml` package
+
+This repository contains a python package named `cognoml`. For development, the package can be installed locally. First, make sure the `cognoma-machine-learning` environment is activated, so the `cognoml` is only installed for this environment. Then install using the following command from this repository's root directory:
+
+```sh
+pip install --editable .
+```

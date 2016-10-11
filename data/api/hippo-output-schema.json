@@ -1,0 +1,323 @@
+{
+  "type": "object",
+  "required": [
+    "dimensions",
+    "grid_search",
+    "model",
+    "observations",
+    "performance"
+  ],
+  "properties": {
+    "grid_search": {
+      "type": "object",
+      "required": [
+        "cv_scores"
+      ],
+      "properties": {
+        "cv_scores": {
+          "type": "object",
+          "required": [
+            "columns",
+            "data"
+          ],
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": [
+                    "number",
+                    "string"
+                  ]
+                }
+              }
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "class",
+        "features",
+        "module",
+        "parameters"
+      ],
+      "properties": {
+        "module": {
+          "type": "string"
+        },
+        "features": {
+          "type": "object",
+          "required": [
+            "columns",
+            "data"
+          ],
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": [
+                    "number",
+                    "string"
+                  ]
+                }
+              }
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "parameters": {
+          "type": "object",
+          "required": [
+            "alpha",
+            "average",
+            "class_weight",
+            "epsilon",
+            "eta0",
+            "fit_intercept",
+            "l1_ratio",
+            "learning_rate",
+            "loss",
+            "n_iter",
+            "n_jobs",
+            "penalty",
+            "power_t",
+            "random_state",
+            "shuffle",
+            "verbose",
+            "warm_start"
+          ],
+          "properties": {
+            "n_jobs": {
+              "type": "integer"
+            },
+            "loss": {
+              "type": "string"
+            },
+            "epsilon": {
+              "type": "number"
+            },
+            "eta0": {
+              "type": "number"
+            },
+            "fit_intercept": {
+              "type": "boolean"
+            },
+            "shuffle": {
+              "type": "boolean"
+            },
+            "verbose": {
+              "type": "integer"
+            },
+            "penalty": {
+              "type": "string"
+            },
+            "warm_start": {
+              "type": "boolean"
+            },
+            "random_state": {
+              "type": "integer"
+            },
+            "power_t": {
+              "type": "number"
+            },
+            "average": {
+              "type": "boolean"
+            },
+            "n_iter": {
+              "type": "integer"
+            },
+            "alpha": {
+              "type": "number"
+            },
+            "learning_rate": {
+              "type": "string"
+            },
+            "l1_ratio": {
+              "type": "number"
+            },
+            "class_weight": {
+              "type": "string"
+            }
+          }
+        },
+        "class": {
+          "type": "string"
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "required": [
+        "features",
+        "negatives",
+        "observations_selected",
+        "observations_unselected",
+        "positive_prevalence",
+        "positives",
+        "testing_observations",
+        "training_observations"
+      ],
+      "properties": {
+        "training_observations": {
+          "type": "integer"
+        },
+        "observations_unselected": {
+          "type": "integer"
+        },
+        "positive_prevalence": {
+          "type": "number"
+        },
+        "testing_observations": {
+          "type": "integer"
+        },
+        "features": {
+          "type": "integer"
+        },
+        "observations_selected": {
+          "type": "integer"
+        },
+        "positives": {
+          "type": "integer"
+        },
+        "negatives": {
+          "type": "integer"
+        }
+      }
+    },
+    "observations": {
+      "type": "object",
+      "required": [
+        "columns",
+        "data"
+      ],
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          }
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "required": [
+        "cv",
+        "testing",
+        "training"
+      ],
+      "properties": {
+        "training": {
+          "type": "object",
+          "required": [
+            "accuracy",
+            "auprc",
+            "auroc",
+            "balanced_accuracy",
+            "f1",
+            "precision",
+            "recall"
+          ],
+          "properties": {
+            "accuracy": {
+              "type": "number"
+            },
+            "auprc": {
+              "type": "number"
+            },
+            "balanced_accuracy": {
+              "type": "number"
+            },
+            "recall": {
+              "type": "number"
+            },
+            "f1": {
+              "type": "number"
+            },
+            "precision": {
+              "type": "number"
+            },
+            "auroc": {
+              "type": "number"
+            }
+          }
+        },
+        "testing": {
+          "type": "object",
+          "required": [
+            "accuracy",
+            "auprc",
+            "auroc",
+            "balanced_accuracy",
+            "f1",
+            "precision",
+            "recall"
+          ],
+          "properties": {
+            "accuracy": {
+              "type": "number"
+            },
+            "auprc": {
+              "type": "number"
+            },
+            "balanced_accuracy": {
+              "type": "number"
+            },
+            "recall": {
+              "type": "number"
+            },
+            "f1": {
+              "type": "number"
+            },
+            "precision": {
+              "type": "number"
+            },
+            "auroc": {
+              "type": "number"
+            }
+          }
+        },
+        "cv": {
+          "type": "object",
+          "required": [
+            "auroc"
+          ],
+          "properties": {
+            "auroc": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  }
+}
