@@ -24,7 +24,7 @@ def read_data(version=None):
     X = pd.read_table(path, index_col=0)
     return X
 
-def classify(sample_id, mutation_status, data_version, **kwargs):
+def classify(sample_id, mutation_status, data_version, json_sanitize=False, **kwargs):
     """
     Perform an analysis.
     
@@ -34,12 +34,16 @@ def classify(sample_id, mutation_status, data_version, **kwargs):
         Sample IDs of the observations.
     mutation_status : list
         Mutation status (0 or 1) of each sample.
+    data_version : int
+        Integer with the figshare data version.
+    json_sanitize : bool
+        Whether to make results JSON-serializable. If `True` DataFrames are
+        converted to DataTables format.
 
     Returns
     -------
     results : dict
-        A JSON-serializable object. OrderedDicts are used for dictionaries to
-        enable reproducibile export. See `data/api/hippo-output-schema.json`
+        An object of results. See `data/api/hippo-output-schema.json`
         for JSON schema.
     """
     results = collections.OrderedDict()
@@ -85,10 +89,10 @@ def classify(sample_id, mutation_status, data_version, **kwargs):
     dimensions['features'] = len(X.columns)
     dimensions['positives'] = sum(obs_df.status == 1)
     dimensions['negatives'] = sum(obs_df.status == 0)
-    dimensions['positive_prevalence'] = y.mean().round(5)
+    dimensions['positive_prevalence'] = y.mean()
     dimensions['training_observations'] = len(obs_train_df)
     dimensions['testing_observations'] = len(obs_test_df)
-    results['dimensions'] = utils.value_map(dimensions, round, ndigits=5)
+    results['dimensions'] = dimensions
 
     performance = collections.OrderedDict()
     for part, df in ('training', obs_train_df), ('testing', obs_test_df):
@@ -96,19 +100,22 @@ def classify(sample_id, mutation_status, data_version, **kwargs):
         y_pred = df.predicted_status
         metrics = utils.class_metrics(y_true, y_pred)
         metrics.update(utils.threshold_metrics(y_true, y_pred))
-        performance[part] = utils.value_map(metrics, round, ndigits=5)
-    performance['cv'] = {'auroc': round(grid_search.best_score_, 5)}
+        performance[part] = metrics
+    performance['cv'] = {'auroc': grid_search.best_score_}
     results['performance'] = performance
     
     gs = collections.OrderedDict()
     gs['cv_scores'] = utils.cv_results_to_df(grid_search.cv_results_)
-    gs = utils.value_map(gs, utils.df_to_datatables)
     results['grid_search'] = gs
     
     results['model'] = utils.model_info(grid_search.best_estimator_.steps[-1][1])
 
     feature_df = utils.get_feature_df(grid_search, X.columns)
-    results['model']['features'] = utils.df_to_datatables(feature_df)
+    results['model']['features'] = feature_df
 
-    results['observations'] = utils.df_to_datatables(obs_df)
+    results['observations'] = obs_df
+    
+    if json_sanitize:
+        results = utils.make_json_serializable(results)
+    
     return results

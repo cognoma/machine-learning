@@ -35,37 +35,6 @@ def df_to_datatables(df, double_precision=5, indent=2):
     obj.move_to_end('data')
     return obj
 
-def json_sanitize(obj, object_pairs_hook=collections.OrderedDict):
-    """
-    Sanitize an object containing pandas/numpy objects so it's JSON
-    serializable. Does not preserve order since `pandas.json.dumps()` does not
-    respect OrderedDict objects. Hence, it's recommended to just use the builtin
-    `json.dump` function with `cls=JSONEncoder`.
-    """
-    obj_str = pd.json.dumps(obj)
-    print(obj_str)
-    obj = json.loads(obj_str, object_pairs_hook=object_pairs_hook)
-    return obj
-
-class JSONEncoder(json.JSONEncoder):
-    """
-    A JSONEncoder that supports numpy types by converting them to standard
-    python types.
-    """
-
-    def default(self, o):
-        if type(o).__module__ == 'numpy':
-            return o.item()        
-        return super().default(o)
-
-def value_map(dictionary, function, *args, **kwargs):
-    """
-    Edits a dictionary-like object in place to apply a function to its values.
-    """
-    for key, value in dictionary.items():
-        dictionary[key] = function(value, *args, **kwargs)
-    return dictionary
-
 def class_metrics(y_true, y_pred):
     metrics = collections.OrderedDict()
     metrics['precision'] = sklearn.metrics.precision_score(y_true, y_pred)
@@ -130,3 +99,29 @@ def sort_dict(dictionary):
     """
     items = sorted(dictionary.items())
     return collections.OrderedDict(items)
+
+def make_json_serializable(obj):
+    """
+    Convert an object to be JSON serializable. Unsupported types throw a
+    ValueError.
+    """
+    if isinstance(obj, dict):
+        return collections.OrderedDict(
+            (make_json_serializable(k), make_json_serializable(v)) for k, v in obj.items())
+    
+    if isinstance(obj, (list, tuple)):
+        return [make_json_serializable(x) for x in obj]
+    
+    if isinstance(obj, pd.DataFrame):
+        return df_to_datatables(obj)
+    
+    if type(obj).__module__ == 'numpy':
+        obj = obj.item()
+    
+    if isinstance(obj, float):
+        return float(format(obj, '.5g'))
+    
+    if isinstance(obj, (int, str)):
+        return obj
+    
+    raise ValueError(type(obj), 'cannot be JSON sanitized')
