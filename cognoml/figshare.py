@@ -42,8 +42,7 @@ def download_files(directory, article_id=3487685, version=None):
     article = response.json()
     version_directory = os.path.join(directory, 'v{}'.format(version))
     
-    if not os.path.exists(version_directory):
-        os.mkdir(version_directory)
+    os.makedirs(version_directory, exist_ok=True)
     
     path = os.path.join(version_directory, 'info.json')
     with open(path, 'w') as write_file:

@@ -42,8 +42,22 @@ setuptools.setup(
 
     # What does your project relate to?
     keywords='cognoma machine learning cancer',
-
+    
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
-    packages=['cognoml'],
+    packages=setuptools.find_packages(),
+    
+    # List run-time dependencies here.  These will be installed by pip when
+    # your project is installed. For an analysis of "install_requires" vs pip's
+    # requirements files see:
+    # https://packaging.python.org/en/latest/requirements.html
+    install_requires=[
+        'numexpr == 2.6.0',
+        'numpy == 1.11.1',
+        'pandas == 0.18.1',
+        'requests == 2.11.1',
+        'scikit-learn == 0.18.0',
+        'scipy == 0.17.1',
+    ],
+
 )
