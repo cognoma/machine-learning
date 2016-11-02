@@ -6,4 +6,3 @@ download/
 
 # Python
 __pycache__/
-*.egg-info/

@@ -23,7 +23,7 @@ Activate the environment by running `source activate cognoma-machine-learning` o
 
 ## `cognoml` package
 
-This repository contains a python package named `cognoml`. For development, the package can be installed locally. First, make sure the `cognoma-machine-learning` environment is activated, so the `cognoml` is only installed for this environment. Then install using the following command from this repository's root directory:
+[`cognoml`](https://github.com/cognoma/cognoml) is a pip-installable python package that is under development to perform machine learning tasks for Project Cognoma. If you would like to use `cognoml` in this repository, first make sure the `cognoma-machine-learning` environment is activated, so `cognoml` is only installed for this environment. Then clone `cognoml` from GitHub, and install it by running the following command from `cognoml`'s root directory:
 
 ```sh
 pip install --editable .
