@@ -1,0 +1,5763 @@
+"data": {
+  "values": [
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.08974358974358974,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "adrenocortical cancer",
+    "frequency": 0.15384615384615385,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.015384615384615385,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.023076923076923078,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.020512820512820513,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.020512820512820513,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.007692307692307693,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.046153846153846156,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.020512820512820513,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.15384615384615385,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.035897435897435895,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.015384615384615385,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.017948717948717947,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.007692307692307693,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.005128205128205128,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.015384615384615385,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.028205128205128206,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.007692307692307693,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.010256410256410256,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.017948717948717947,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.015384615384615385,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.007692307692307693,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.015384615384615385,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.007692307692307693,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.020512820512820513,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.028205128205128206,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.002564102564102564,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.017948717948717947,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.010256410256410256,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.02564102564102564,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.01282051282051282,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.015384615384615385,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.005128205128205128,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.005128205128205128,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "bladder urothelial carcinoma",
+    "frequency": 0.41794871794871796,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.007751937984496124,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.007751937984496124,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.013565891472868217,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.003875968992248062,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.003875968992248062,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.003875968992248062,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.005813953488372093,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.009689922480620155,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.003875968992248062,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.001937984496124031,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.009689922480620155,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.003875968992248062,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "brain lower grade glioma",
+    "frequency": 0.06395348837209303,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0010245901639344263,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.007172131147540984,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.006147540983606557,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0020491803278688526,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0010245901639344263,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.015368852459016393,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.02151639344262295,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.005122950819672131,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0020491803278688526,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0020491803278688526,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0010245901639344263,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0010245901639344263,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.006147540983606557,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.004098360655737705,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.009221311475409836,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.005122950819672131,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0020491803278688526,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0010245901639344263,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0020491803278688526,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0030737704918032786,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0030737704918032786,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0030737704918032786,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0010245901639344263,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.005122950819672131,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.00819672131147541,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.006147540983606557,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0030737704918032786,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.00819672131147541,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.004098360655737705,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.009221311475409836,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0010245901639344263,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0030737704918032786,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "breast invasive carcinoma",
+    "frequency": 0.1096311475409836,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.010362694300518135,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.02072538860103627,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.010362694300518135,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.010362694300518135,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0051813471502590676,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.05699481865284974,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.046632124352331605,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.046632124352331605,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.010362694300518135,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.015544041450777202,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0051813471502590676,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.010362694300518135,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.015544041450777202,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.015544041450777202,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.010362694300518135,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.015544041450777202,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.010362694300518135,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.010362694300518135,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.015544041450777202,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0051813471502590676,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0051813471502590676,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.03626943005181347,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.03626943005181347,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0051813471502590676,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.02072538860103627,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.02072538860103627,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.015544041450777202,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0051813471502590676,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.010362694300518135,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "cervical & endocervical cancer",
+    "frequency": 0.3160621761658031,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.027777777777777776,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.027777777777777776,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.05555555555555555,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.027777777777777776,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.027777777777777776,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.027777777777777776,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "cholangiocarcinoma",
+    "frequency": 0.1388888888888889,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.014285714285714285,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.047619047619047616,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.023809523809523808,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.023809523809523808,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.009523809523809525,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.09523809523809523,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.01904761904761905,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.24285714285714285,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.02857142857142857,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.1,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.02857142857142857,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.004761904761904762,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.03333333333333333,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.01904761904761905,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.06190476190476191,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.009523809523809525,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.004761904761904762,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.004761904761904762,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.01904761904761905,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.014285714285714285,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.009523809523809525,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.05238095238095238,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.01904761904761905,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.014285714285714285,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.03333333333333333,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.05714285714285714,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.004761904761904762,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.023809523809523808,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.03333333333333333,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.0380952380952381,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.009523809523809525,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.009523809523809525,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.009523809523809525,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "colon adenocarcinoma",
+    "frequency": 0.45714285714285713,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.08333333333333333,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0625,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.020833333333333332,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.041666666666666664,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.20833333333333334,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.041666666666666664,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.041666666666666664,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.08333333333333333,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.020833333333333332,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.020833333333333332,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.020833333333333332,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.041666666666666664,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.08333333333333333,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.041666666666666664,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.041666666666666664,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "diffuse large B-cell lymphoma",
+    "frequency": 0.4791666666666667,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.01098901098901099,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.027472527472527472,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.01098901098901099,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.027472527472527472,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.07692307692307693,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.01098901098901099,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.02197802197802198,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.01098901098901099,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.016483516483516484,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.027472527472527472,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.01098901098901099,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.016483516483516484,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.02197802197802198,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.01098901098901099,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.01098901098901099,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.01098901098901099,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.005494505494505495,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "esophageal carcinoma",
+    "frequency": 0.2857142857142857,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.006578947368421052,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.013157894736842105,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.006578947368421052,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.006578947368421052,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.006578947368421052,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.013157894736842105,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.006578947368421052,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.006578947368421052,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.019736842105263157,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.006578947368421052,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.013157894736842105,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.006578947368421052,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.013157894736842105,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "glioblastoma multiforme",
+    "frequency": 0.07894736842105263,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.06573705179282868,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.01195219123505976,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.01195219123505976,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00398406374501992,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00398406374501992,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.03386454183266932,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00199203187250996,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.08167330677290836,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.013944223107569721,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.01195219123505976,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00398406374501992,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00398406374501992,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.0099601593625498,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.013944223107569721,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.013944223107569721,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00796812749003984,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00398406374501992,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00199203187250996,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00597609561752988,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00398406374501992,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00597609561752988,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00199203187250996,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00796812749003984,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.0199203187250996,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.0099601593625498,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00398406374501992,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.0199203187250996,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.01195219123505976,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.013944223107569721,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00199203187250996,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00597609561752988,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00398406374501992,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.00199203187250996,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "head & neck squamous cell carcinoma",
+    "frequency": 0.3107569721115538,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.015151515151515152,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.045454545454545456,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.015151515151515152,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.015151515151515152,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.015151515151515152,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.015151515151515152,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.015151515151515152,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.015151515151515152,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.015151515151515152,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "kidney chromophobe",
+    "frequency": 0.09090909090909091,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.014150943396226415,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.014150943396226415,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.05188679245283019,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0047169811320754715,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.03773584905660377,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0047169811320754715,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0047169811320754715,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0047169811320754715,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.009433962264150943,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.02358490566037736,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.009433962264150943,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0047169811320754715,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.009433962264150943,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.009433962264150943,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0047169811320754715,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0047169811320754715,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "kidney clear cell carcinoma",
+    "frequency": 0.16981132075471697,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.023809523809523808,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.023809523809523808,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.017857142857142856,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.011904761904761904,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.05357142857142857,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.023809523809523808,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.005952380952380952,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.011904761904761904,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.011904761904761904,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.011904761904761904,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "kidney papillary cell carcinoma",
+    "frequency": 0.22023809523809523,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0027247956403269754,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.008174386920980926,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.008174386920980926,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.005449591280653951,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.005449591280653951,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.043596730245231606,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.010899182561307902,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.051771117166212535,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.01634877384196185,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.008174386920980926,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.005449591280653951,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0027247956403269754,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.010899182561307902,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.013623978201634877,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.013623978201634877,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0027247956403269754,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.005449591280653951,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.013623978201634877,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0027247956403269754,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.008174386920980926,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0027247956403269754,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.008174386920980926,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.010899182561307902,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.01634877384196185,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.008174386920980926,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.021798365122615803,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.010899182561307902,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.005449591280653951,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.005449591280653951,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.008174386920980926,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.0027247956403269754,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "liver hepatocellular carcinoma",
+    "frequency": 0.22343324250681199,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.006160164271047228,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.03285420944558522,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.018480492813141684,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.004106776180698152,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.01026694045174538,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.08624229979466119,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.012320328542094456,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.14989733059548255,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.028747433264887063,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.024640657084188913,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.006160164271047228,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.002053388090349076,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.008213552361396304,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.01026694045174538,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.01026694045174538,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.026694045174537988,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.01642710472279261,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.008213552361396304,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.012320328542094456,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.008213552361396304,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.012320328542094456,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.006160164271047228,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.004106776180698152,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.004106776180698152,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.01026694045174538,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.024640657084188913,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.008213552361396304,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.004106776180698152,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.018480492813141684,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.012320328542094456,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.024640657084188913,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.006160164271047228,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.002053388090349076,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.002053388090349076,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.002053388090349076,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "lung adenocarcinoma",
+    "frequency": 0.42505133470225875,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.02247191011235955,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.016853932584269662,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.011235955056179775,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.07865168539325842,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.14606741573033707,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.016853932584269662,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.011235955056179775,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.02247191011235955,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.011235955056179775,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.028089887640449437,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.011235955056179775,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.011235955056179775,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.011235955056179775,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.011235955056179775,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0056179775280898875,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.016853932584269662,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.05056179775280899,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.016853932584269662,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0056179775280898875,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.028089887640449437,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.016853932584269662,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.02247191011235955,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.011235955056179775,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0056179775280898875,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0056179775280898875,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "lung squamous cell carcinoma",
+    "frequency": 0.43258426966292135,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0963855421686747,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.024096385542168676,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.07228915662650602,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.13253012048192772,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.012048192771084338,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "mesothelioma",
+    "frequency": 0.3614457831325301,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0106951871657754,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.016042780748663103,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.026737967914438502,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.016042780748663103,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0106951871657754,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.0053475935828877,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "ovarian serous cystadenocarcinoma",
+    "frequency": 0.12299465240641712,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.013333333333333334,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.03333333333333333,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.013333333333333334,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.06,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.02,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.013333333333333334,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.013333333333333334,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.02,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.013333333333333334,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.013333333333333334,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "pancreatic adenocarcinoma",
+    "frequency": 0.16,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.00558659217877095,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.00558659217877095,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.01675977653631285,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0111731843575419,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.00558659217877095,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.00558659217877095,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.00558659217877095,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "pheochromocytoma & paraganglioma",
+    "frequency": 0.05027932960893855,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.00906344410876133,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.021148036253776436,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.006042296072507553,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.006042296072507553,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.006042296072507553,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0030211480362537764,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "prostate adenocarcinoma",
+    "frequency": 0.07854984894259819,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.012345679012345678,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.012345679012345678,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.04938271604938271,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.12345679012345678,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.037037037037037035,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.16049382716049382,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.012345679012345678,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.024691358024691357,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.012345679012345678,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.012345679012345678,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.037037037037037035,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.012345679012345678,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.037037037037037035,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.012345679012345678,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.037037037037037035,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.012345679012345678,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.012345679012345678,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "rectum adenocarcinoma",
+    "frequency": 0.3950617283950617,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.003952569169960474,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.007905138339920948,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.015810276679841896,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.019762845849802372,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.011857707509881422,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.003952569169960474,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.003952569169960474,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.003952569169960474,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.003952569169960474,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.003952569169960474,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.007905138339920948,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.015810276679841896,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.023715415019762844,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.011857707509881422,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.011857707509881422,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.003952569169960474,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "sarcoma",
+    "frequency": 0.11857707509881422,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.07766990291262135,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.2815533980582524,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.019417475728155338,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.019417475728155338,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.019417475728155338,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.02912621359223301,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.04854368932038835,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.05825242718446602,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.019417475728155338,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.019417475728155338,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.009708737864077669,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "skin cutaneous melanoma",
+    "frequency": 0.4563106796116505,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.007352941176470588,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.03676470588235294,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.025735294117647058,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.03676470588235294,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.007352941176470588,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.09926470588235294,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.01838235294117647,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.23897058823529413,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.051470588235294115,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.03676470588235294,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.014705882352941176,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.003676470588235294,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.03676470588235294,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.011029411764705883,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.04779411764705882,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.014705882352941176,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.011029411764705883,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.01838235294117647,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.01838235294117647,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.007352941176470588,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.003676470588235294,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.029411764705882353,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.003676470588235294,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.022058823529411766,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.0625,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.04411764705882353,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.003676470588235294,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.04411764705882353,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.025735294117647058,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.05514705882352941,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.007352941176470588,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.003676470588235294,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.007352941176470588,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.007352941176470588,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "stomach adenocarcinoma",
+    "frequency": 0.44485294117647056,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.013333333333333334,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.006666666666666667,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "testicular germ cell tumor",
+    "frequency": 0.04666666666666667,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.008403361344537815,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.025210084033613446,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.008403361344537815,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.008403361344537815,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.008403361344537815,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.008403361344537815,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "thymoma",
+    "frequency": 0.058823529411764705,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.006085192697768763,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.004056795131845842,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.004056795131845842,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.002028397565922921,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "thyroid carcinoma",
+    "frequency": 0.036511156186612576,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.017543859649122806,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.017543859649122806,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.03508771929824561,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.017543859649122806,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.017543859649122806,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.03508771929824561,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.03508771929824561,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.017543859649122806,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.017543859649122806,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.017543859649122806,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.017543859649122806,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.017543859649122806,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "uterine carcinosarcoma",
+    "frequency": 0.15789473684210525,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.14285714285714285,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.14285714285714285,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.14285714285714285,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.14285714285714285,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.14285714285714285,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "uterine corpus endometrioid carcinoma",
+    "frequency": 0.2857142857142857,
+    "gene_symbol": "TOTAL"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "AJUBA"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOT"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "AMOTL1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0125,
+    "gene_symbol": "AMOTL2"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "CASP3"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "DCHS1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0125,
+    "gene_symbol": "DVL2"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0125,
+    "gene_symbol": "FAT4"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "LATS2"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "LIMD1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1A"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "MOB1B"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "NEK8"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "NF2"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0125,
+    "gene_symbol": "NPHP4"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "PJA2"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "SAV1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "SOX11"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK3"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "STK4"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD2"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD3"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "TEAD4"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "TJP2"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "WTIP"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC2"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWC3"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "WWTR1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0125,
+    "gene_symbol": "YAP1"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAB"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0,
+    "gene_symbol": "YWHAE"
+  },
+  {
+    "disease": "uveal melanoma",
+    "frequency": 0.0625,
+    "gene_symbol": "TOTAL"
+  }
+]}

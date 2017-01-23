@@ -1,0 +1,37 @@
+{
+  "config": {
+    "scale": {
+      "textBandWidth": 30,
+      "bandSize": 15
+    },
+    "cell": {
+      "height": 350,
+      "width": 500
+    },
+    "mark": {
+      "applyColorToBackground": true
+    }
+  },
+  "data": {
+    "url": "./heatmap_data.json"
+  },
+  "encoding": {
+    "row": {
+      "field": "disease"
+    },
+    "color": {
+      "field": "frequency"
+    },
+    "column": {
+      "field": "gene_symbol",
+      "type": "nominal",
+      "axis": {"labelAngle": -90,
+        "offset": 25
+      }
+    },
+    "text": {
+      "value": " "
+    }
+  },
+  "mark": "text"
+}
