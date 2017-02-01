@@ -1,0 +1,5 @@
+partition,feature_set,auc,legend_index
+train,full features,0.76,0
+test,full features,0.74,1
+train,covariates only,0.72,2
+test,covariates only,0.70,3

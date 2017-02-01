@@ -1,0 +1,368 @@
+<head>
+  <title>ROC Curves</title>
+  <meta charset="utf-8">
+
+<!-- TODO -->
+<!-- Install with npm install vega -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.5/vega.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/1.3.1/vega-lite.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/2.2.0/vega-embed.min.js" charset="utf-8"></script>
+ 
+
+
+  <style media="screen">
+    /* Add space between vega-embed links  */
+    .vega-actions a {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ROC Sample</h1>
+  
+  <div id="roc_plot"></div>
+
+  <script>
+  var vSpec = {
+  "width": 600,
+  "height": 400,
+  "padding": {"top": 10,"left": 70,"bottom": 60,"right": 190}, // 190 on right for the legend
+  // TODO: use padding for the legend_auc scale 'grouped bar' example in Group Marks
+  "signals": [
+    {
+      "name": "index_fpr",
+      "init": 0.4,
+      "streams": [{
+        "type": "mousemove",
+        "expr": "clamp(eventX(), 0, eventGroup('root').width)",
+        "scale": {"name": "xscale", "invert": true}
+      }]
+    }
+  ],
+  "data": [
+    {
+      "name": "roc",
+      "url": "data/sample_roc_data.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["partition", "feature_set", "false_positive_rate"],
+          "summarize": [{
+            //TODO: summarize so that we can find the exact spot of the false positive rate for interactivity
+            // This isn't correct, but is a placeholder for now
+            "field": "true_positive_rate", "ops": ["min"], "as": ["true_positive_rate"]            
+          }]            
+        },
+        {
+          "type": "formula",
+          "field": "legend",
+          "expr": "datum.partition + ' (' + datum.feature_set + ')'"
+        }
+      ]
+    },
+    {
+      "name": "roc_index_lookup",
+      "source": "roc",
+      "transform": [
+        {
+          "type": "filter",
+          "test": "datum.false_positive_rate >= index_fpr"
+        },        
+        {
+          "type": "aggregate",
+          "groupby": ["legend"],
+          "summarize": [{
+            "field": "false_positive_rate", "ops": ["min"], "as": ["min_false_positive_rate"]      
+          }]            
+        }
+      ]        
+    },
+    {
+      "name": "roc_index",
+      "source": "roc",
+      "transform": [
+        {
+          "type": "lookup",
+          "on": "roc_index_lookup", "onKey": "legend",
+          "keys": ["legend"], "as": ["lookup"], "default": -1
+        },        
+        {
+          "type": "filter",
+          "test": "datum.false_positive_rate == datum.lookup.min_false_positive_rate"
+        },
+        {
+          "type": "aggregate",
+          "groupby": ["legend", "partition", "feature_set"],
+          "summarize": [{
+            "field": "false_positive_rate", "ops": ["min"], "as": ["agg_false_positive_rate"],
+            "field": "true_positive_rate", "ops": ["min"], "as": ["agg_true_positive_rate"]          
+          }] 
+        }
+      ]        
+    },
+    /*{
+      "name": "roc_index_min",
+      "source": "roc_index",
+      "transform": [
+        {
+          "type": "aggregate",
+          "summarize": [{
+            "field": "agg_true_positive_rate", "ops": ["min"], "as": ["min_true_positive_rate"]
+          }] 
+        },
+        {
+          "type": "formula",
+          "field": "key",
+          "expr": "'all'"
+        }
+      ]        
+    },*/
+    {
+      "name": "dash_data",
+      "values": [{"strokeDash": [0,0]},{"strokeDash": [5,7]}]
+    },
+    {
+      "name": "dash_legend",
+      "values": [{"strokeDash": [0,0]},{"strokeDash": [3,3]}]
+    },
+    {
+      "name": "legend_auc",
+      "url": "data/sample_auc.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {
+          "type": "formula",
+          "field": "legend",
+          "expr": "datum.partition + ' (' + datum.feature_set + ')'"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "xscale",
+      "type": "linear",
+      "domain": {"data": "roc","field": "false_positive_rate"},
+      "range": "width",
+      "zero": "true",
+      "round": "true"
+    },
+    {
+      "name": "yscale",
+      "type": "linear",
+      "domain": {"data": "roc","field": "true_positive_rate"},
+      "range": "height",
+      "zero": "true",
+      "round": "true",
+      "nice": "true"
+    },
+    {
+      "name": "colorscale",
+      "type": "ordinal",
+      "domain": {"data": "roc","field": "partition"},
+      "range": ["#5254a3","#fd8d3c"]
+    },
+    {
+      "name": "dashscale",
+      "type": "ordinal",
+      "domain": {"data": "roc","field": "feature_set"},
+      "range": {"data": "dash_data","field": "strokeDash"}
+    },
+    {
+      "name": "dashlegendscale",
+      "type": "ordinal",
+      "domain": {"data": "roc","field": "feature_set"},
+      "range": {"data": "dash_legend","field": "strokeDash"}
+    },
+    {
+      "name": "legendrow",
+      "type": "linear",
+      "domain": {"data": "legend_auc", "field": "legend_index"},
+      "rangeMin": 0,
+      "rangeMax": 90 // size of the interactive legend
+    }
+  ],
+  "axes": [
+    {
+      "type": "x",
+      "title": "False positive rate",
+      "scale": "xscale",
+      "format": "%"
+    },
+    {
+      "type": "y",
+      "title": "True positive rate",
+      "scale": "yscale",
+      "format": "%"
+    }
+  ],
+  "legends": [
+    {
+      "title": "partition",
+      "fill": "colorscale",
+      "properties": {
+       "title": {
+         "fontSize": {"value": 16}
+       },
+       "labels": {
+         "fontSize": {"value": 15}
+       },
+        "legend": {"x": {"value": 440},"y": {"value": 250}},
+        "symbols": {
+          "size": {"value": 250},
+          "strokeWidth": {"value": 3},
+          "stroke": {"scale": "colorscale","field": "data"},
+          "shape": {
+              "value": "M-0.5,-0.0L0.5,0"
+          }
+        }
+      }
+    },
+    {
+      "title": "feature set",
+      "stroke": "dashlegendscale",
+      "properties": {
+       "title": {
+         "fontSize": {"value": 16}
+       },
+       "labels": {
+         "fontSize": {"value": 15},         
+          "text": {"field": "data"}
+       },
+        "symbols": {
+          "size": {"value": 250},
+          "stroke": {"value": "black"},
+          "strokeWidth": {"value": 3},
+          "strokeDash": {"scale": "dashlegendscale","field": "data"},
+          "shape": {
+              "value": "M-0.5,-0.0L0.5,0"
+          }
+        },
+        "legend": {"x": {"value": 440},"y": {"value": 320}}
+      }
+    }
+  ],
+  "marks": [
+    { 
+      "type":"rule",
+      "properties": {
+        "update": {
+          "x": {"scale": "xscale", "signal": "index_fpr"},
+          "y": {"value": 0},
+          "y2": {"field": {"group": "height"}},
+          "stroke": {"value": "red"}
+        }
+      }
+    },
+    {
+      "type": "group",
+      "from": {
+        "data": "roc",
+        "transform": [{"type": "facet","groupby": "legend"}]
+      },
+      "marks": [
+      {
+        "type": "line",
+        "properties": {
+          "update": {
+            "x": {
+              "scale": "xscale",
+              "field": "false_positive_rate"
+            },
+            "y": {
+              "scale": "yscale",
+              "field": "true_positive_rate"
+            },
+            "stroke": {"scale": "colorscale","field": "legend"},
+            "strokeWidth": {"value": 4},
+            "strokeOpacity": {"value": 0.6},
+            "strokeDash": {"scale": "dashscale","field": "feature_set"}
+          }
+        }
+      }]
+    },  
+    {
+      "type": "group",
+      "from": {
+        "data": "roc_index",
+        "transform": [
+          {
+            "type": "lookup",
+            "on": "legend_auc", "onKey": "legend",
+            "keys": ["legend"], "as": ["lookup"], "default": -1
+          },
+          {"type": "facet", "groupby": "legend"}
+        ]
+      },
+      "properties": {
+        "update": {        
+          "y": {"value": 100},
+          "x": {"scale": "xscale", "signal": "index_fpr", "offset": 6},
+          "width": {"value": 200},
+          "height": {"value": 120},
+          "strokeWidth": {"value": 0.5},
+          "stroke": {"value": "black"}
+          //"fill": {"value": "white"}
+        }
+      },
+      "marks": [
+      {
+        "type": "group",
+        "properties": {
+          "update": {
+            "x": {"value": 4},
+            "y": {"scale": "legendrow","field": "lookup.legend_index", "offset": 13}
+            }
+          },
+          "marks": [
+            {
+              "type": "text",
+              "properties": {
+                "update": {
+                  "x": {"value": 0},
+                  "y": {"value": 0},
+                  "fontSize": {"value": 11},
+                  "fill": {"value": "black"},
+                  "fontWeight": {"value": "bold"},
+                  "text": {
+                    "template": "{{parent.legend}}"
+                  }
+                }
+              }
+            },
+            {
+              "type": "text",
+              "properties": {
+                "update": {
+                  "x": {"value": 0},
+                  "y": {"value": 13},
+                  "fontSize": {"value": 11},
+                  "fill": {"value": "black"},
+                  "text": {
+                    "template": "TPR: {{parent.agg_true_positive_rate|number: '.3p'}}, FPR: {{index_fpr|number: '.3p'}}, AUC {{parent.lookup.auc|number: '.3p'}}"
+                  }
+                }
+              }
+            }
+          ]
+        }    
+      ]
+    }
+  ]
+}
+
+  var embedSpec = {
+    mode: "vega", 
+    spec: vSpec,
+    actions: false
+  };
+
+  vg.embed("#roc_plot", embedSpec, function(error, result) {
+  
+  });
+  </script>
+</body>
+</html>
