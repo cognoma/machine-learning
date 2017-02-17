@@ -44,7 +44,7 @@ GENE = 'TP53' # TP53
 # Parameters for Dimensionality reduction
 neighbors = 8
 
-components = 64
+components = 256
 
 # Parameter Sweep for Hyperparameters
 
@@ -122,7 +122,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_
 
 # In[12]:
 
-transformer = Isomap(n_neighbors=neighbors, n_components=components, path_method='D', eigen_solver='arpack', n_jobs=1)
+transformer = Isomap(n_neighbors=neighbors, n_components=components, path_method='D', eigen_solver='arpack', n_jobs=-1)
 
 
 # ## Define pipeline and Cross validation model fitting
@@ -136,7 +136,7 @@ clf = SGDClassifier(random_state=0, class_weight='balanced',
 # joblib is used to cross-validate in parallel by setting `n_jobs=-1` in GridSearchCV
 # Supress joblib warning. See https://github.com/scikit-learn/scikit-learn/issues/6370
 warnings.filterwarnings('ignore', message='Changing the shape of non-C contiguous array')
-clf_grid = GridSearchCV(estimator=clf, param_grid=param_grid, n_jobs=1,scoring='roc_auc')
+clf_grid = GridSearchCV(estimator=clf, param_grid=param_grid, n_jobs=-1,scoring='roc_auc')
 pipeline = make_pipeline(
     StandardScaler(),  # Feature scaling
     transformer, # Dimensionality reduction via Isomap
