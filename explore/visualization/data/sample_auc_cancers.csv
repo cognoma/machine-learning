@@ -1,0 +1,73 @@
+cancer,partition,feature_set,auroc
+skin cutaneous melanoma,train,full features,0.68
+skin cutaneous melanoma,test,full features,0.86
+skin cutaneous melanoma,train,covariates only,0.55
+skin cutaneous melanoma,test,covariates only,0.58
+mesothelioma,train,full features,0.58
+mesothelioma,test,full features,0.86
+mesothelioma,train,covariates only,0.56
+mesothelioma,test,covariates only,0.57
+sarcoma,train,full features,0.6
+sarcoma,test,full features,0.81
+sarcoma,train,covariates only,0.45
+sarcoma,test,covariates only,0.55
+esophageal carcinoma,train,full features,0.6
+esophageal carcinoma,test,full features,0.81
+esophageal carcinoma,train,covariates only,0.52
+esophageal carcinoma,test,covariates only,0.56
+stomach adenocarcinoma,train,full features,0.76
+stomach adenocarcinoma,test,full features,0.76
+stomach adenocarcinoma,train,covariates only,0.58
+stomach adenocarcinoma,test,covariates only,0.68
+lung squamous cell carcinoma,train,full features,0.65
+lung squamous cell carcinoma,test,full features,0.73
+lung squamous cell carcinoma,train,covariates only,0.65
+lung squamous cell carcinoma,test,covariates only,0.35
+ovarian serous cystadenocarcinoma,train,full features,0.55
+ovarian serous cystadenocarcinoma,test,full features,0.72
+ovarian serous cystadenocarcinoma,train,covariates only,0.45
+ovarian serous cystadenocarcinoma,test,covariates only,0.72
+head & neck squamous cell carinoma,train,full features,0.63
+head & neck squamous cell carinoma,test,full features,0.67
+head & neck squamous cell carinoma,train,covariates only,0.5
+head & neck squamous cell carinoma,test,covariates only,0.53
+breast invasive carcinoma,train,full features,0.65
+breast invasive carcinoma,test,full features,0.66
+breast invasive carcinoma,train,covariates only,0.54
+breast invasive carcinoma,test,covariates only,0.55
+kidney clear cell carcinoma,train,full features,0.65
+kidney clear cell carcinoma,test,full features,0.66
+kidney clear cell carcinoma,train,covariates only,0.64
+kidney clear cell carcinoma,test,covariates only,0.61
+bladder urothelial carcinoma,train,full features,0.58
+bladder urothelial carcinoma,test,full features,0.61
+bladder urothelial carcinoma,train,covariates only,0.51
+bladder urothelial carcinoma,test,covariates only,0.58
+cervical & endocervical cancer,train,full features,0.65
+cervical & endocervical cancer,test,full features,0.55
+cervical & endocervical cancer,train,covariates only,0.95
+cervical & endocervical cancer,test,covariates only,0.47
+kidney papillary cell carcinoma,train,full features,0.68
+kidney papillary cell carcinoma,test,full features,0.57
+kidney papillary cell carcinoma,train,covariates only,0.5
+kidney papillary cell carcinoma,test,covariates only,0.51
+lung adenocarcinoma,train,full features,0.68
+lung adenocarcinoma,test,full features,0.52
+lung adenocarcinoma,train,covariates only,0.47
+lung adenocarcinoma,test,covariates only,0.49
+diffuse large B-cell lymphoma,train,full features,0.65
+diffuse large B-cell lymphoma,test,full features,0.5
+diffuse large B-cell lymphoma,train,covariates only,0.43
+diffuse large B-cell lymphoma,test,covariates only,0.63
+colon adenocarcinoma,train,full features,0.73
+colon adenocarcinoma,test,full features,0.49
+colon adenocarcinoma,train,covariates only,0.41
+colon adenocarcinoma,test,covariates only,0.21
+rectum adenocarcinoma,train,full features,0.61
+rectum adenocarcinoma,test,full features,0.47
+rectum adenocarcinoma,train,covariates only,0.27
+rectum adenocarcinoma,test,covariates only,0.77
+pancreatic adenocarcinoma,train,full features,0.55
+pancreatic adenocarcinoma,test,full features,0.35
+pancreatic adenocarcinoma,train,covariates only,0.15
+pancreatic adenocarcinoma,test,covariates only,0.45
