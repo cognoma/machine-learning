@@ -1,0 +1,307 @@
+{
+  "width": 600,
+  "height": 400,
+  "padding": {"top": 10,"left": 70,"bottom": 60,"right": 190},
+  "signals": [
+    {
+      "name": "index_fpr",
+      "init": 0.4,
+      "streams": [{
+        "type": "mousemove",
+        "expr": "clamp(eventX(), 0, eventGroup('root').width)",
+        "scale": {"name": "xscale", "invert": true}
+      }]
+    }
+  ],
+  "data": [
+    {
+      "name": "roc",
+      "url": "jupyter_data/roc_output.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["partition", "feature_set", "false_positive_rate"],
+          "summarize": [{
+            "field": "true_positive_rate", "ops": ["min"], "as": ["true_positive_rate"]            
+          }]            
+        },
+        {
+          "type": "formula",
+          "field": "legend",
+          "expr": "datum.partition + ' (' + datum.feature_set + ')'"
+        }
+      ]
+    },
+    {
+      "name": "roc_index_lookup",
+      "source": "roc",
+      "transform": [
+        {
+          "type": "filter",
+          "test": "datum.false_positive_rate >= index_fpr"
+        },        
+        {
+          "type": "aggregate",
+          "groupby": ["legend"],
+          "summarize": [{
+            "field": "false_positive_rate", "ops": ["min"], "as": ["min_false_positive_rate"]      
+          }]            
+        }
+      ]        
+    },
+    {
+      "name": "roc_index",
+      "source": "roc",
+      "transform": [
+        {
+          "type": "lookup",
+          "on": "roc_index_lookup", "onKey": "legend",
+          "keys": ["legend"], "as": ["lookup"], "default": -1
+        },        
+        {
+          "type": "filter",
+          "test": "datum.false_positive_rate == datum.lookup.min_false_positive_rate"
+        },
+        {
+          "type": "aggregate",
+          "groupby": ["legend", "partition", "feature_set"],
+          "summarize": [{
+            "field": "false_positive_rate", "ops": ["min"], "as": ["agg_false_positive_rate"],
+            "field": "true_positive_rate", "ops": ["min"], "as": ["agg_true_positive_rate"]          
+          }] 
+        }
+      ]        
+    },
+    {
+      "name": "dash_data",
+      "values": [{"strokeDash": [0,0]},{"strokeDash": [5,7]}]
+    },
+    {
+      "name": "dash_legend",
+      "values": [{"strokeDash": [0,0]},{"strokeDash": [3,3]}]
+    },
+    {
+      "name": "legend_auc",
+      "url": "jupyter_data/auc.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {
+          "type": "formula",
+          "field": "legend",
+          "expr": "datum.partition + ' (' + datum.feature_set + ')'"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "xscale",
+      "type": "linear",
+      "domain": {"data": "roc","field": "false_positive_rate"},
+      "range": "width",
+      "zero": "true",
+      "round": "true"
+    },
+    {
+      "name": "yscale",
+      "type": "linear",
+      "domain": {"data": "roc","field": "true_positive_rate"},
+      "range": "height",
+      "zero": "true",
+      "round": "true",
+      "nice": "true"
+    },
+    {
+      "name": "colorscale",
+      "type": "ordinal",
+      "domain": {"data": "roc","field": "feature_set"},
+      "range": ["#FF0000","#5254a3", "#fd8d3c"]
+    },
+    {
+      "name": "dashscale",
+      "type": "ordinal",
+      "domain": {"data": "roc","field": "partition"},
+      "range": {"data": "dash_data","field": "strokeDash"}
+    },
+    {
+      "name": "dashlegendscale",
+      "type": "ordinal",
+      "domain": {"data": "roc","field": "partition"},
+      "range": {"data": "dash_legend","field": "strokeDash"}
+    },
+    {
+      "name": "legendrow",
+      "type": "linear",
+      "domain": {"data": "legend_auc", "field": "legend_index"},
+      "rangeMin": 0,
+      "rangeMax": 110
+    }
+  ],
+  "axes": [
+    {
+      "type": "x",
+      "title": "False positive rate",
+      "scale": "xscale",
+      "format": "%"
+    },
+    {
+      "type": "y",
+      "title": "True positive rate",
+      "scale": "yscale",
+      "format": "%"
+    }
+  ],
+  "legends": [
+    {
+      "title": "feature set",
+      "fill": "colorscale",
+      "properties": {
+       "title": {
+         "fontSize": {"value": 16}
+       },
+       "labels": {
+         "fontSize": {"value": 15}
+       },
+        "legend": {"x": {"value": 440},"y": {"value": 250}},
+        "symbols": {
+          "size": {"value": 250},
+          "strokeWidth": {"value": 3},
+          "stroke": {"scale": "colorscale","field": "data"},
+          "shape": {
+              "value": "M-0.5,-0.0L0.5,0"
+          }
+        }
+      }
+    },
+    {
+      "title": "partition",
+      "stroke": "dashlegendscale",
+      "properties": {
+       "title": {
+         "fontSize": {"value": 16}
+       },
+       "labels": {
+         "fontSize": {"value": 15},         
+          "text": {"field": "data"}
+       },
+        "symbols": {
+          "size": {"value": 250},
+          "stroke": {"value": "black"},
+          "strokeWidth": {"value": 3},
+          "strokeDash": {"scale": "dashlegendscale","field": "data"},
+          "shape": {
+              "value": "M-0.5,-0.0L0.5,0"
+          }
+        },
+        "legend": {"x": {"value": 440},"y": {"value": 320}}
+      }
+    }
+  ],
+  "marks": [
+    { 
+      "type":"rule",
+      "properties": {
+        "update": {
+          "x": {"scale": "xscale", "signal": "index_fpr"},
+          "y": {"value": 0},
+          "y2": {"field": {"group": "height"}},
+          "stroke": {"value": "red"}
+        }
+      }
+    },
+    {
+      "type": "group",
+      "from": {
+        "data": "roc",
+        "transform": [{"type": "facet","groupby": "legend"}]
+      },
+      "marks": [
+      {
+        "type": "line",
+        "properties": {
+          "update": {
+            "x": {
+              "scale": "xscale",
+              "field": "false_positive_rate"
+            },
+            "y": {
+              "scale": "yscale",
+              "field": "true_positive_rate"
+            },
+            "stroke": {"scale": "colorscale","field": "feature_set"},
+            "strokeWidth": {"value": 4},
+            "strokeOpacity": {"value": 0.6},
+            "strokeDash": {"scale": "dashscale","field": "partition"}
+          }
+        }
+      }]
+    },  
+    {
+      "type": "group",
+      "from": {
+        "data": "roc_index",
+        "transform": [
+          {
+            "type": "lookup",
+            "on": "legend_auc", "onKey": "legend",
+            "keys": ["legend"], "as": ["lookup"], "default": -1
+          },
+          {"type": "facet", "groupby": "legend"}
+        ]
+      },
+      "properties": {
+        "update": {        
+          "y": {"value": 100},
+          "x": {"scale": "xscale", "signal": "index_fpr", "offset": 10},
+          "width": {"value": 200},
+          "height": {"value": 140},
+          "strokeWidth": {"value": 0.5},
+          "stroke": {"value": "black"}
+        }
+      },
+      "marks": [
+      {
+        "type": "group",
+        "properties": {
+          "update": {
+            "x": {"value": 4},
+            "y": {"scale": "legendrow","field": "lookup.legend_index", "offset": 5}
+            }
+          },
+          "marks": [
+            {
+              "type": "text",
+              "properties": {
+                "update": {
+                  "x": {"value": 0},
+                  "y": {"value": 5},
+                  "fontSize": {"value": 11},
+                  "fill": {"value": "black"},
+                  "fontWeight": {"value": "bold"},
+                  "text": {
+                    "template": "{{parent.legend}}"
+                  }
+                }
+              }
+            },
+            {
+              "type": "text",
+              "properties": {
+                "update": {
+                  "x": {"value": 0},
+                  "y": {"value": 15},
+                  "fontSize": {"value": 11},
+                  "fill": {"value": "black"},
+                  "text": {
+                    "template": "TPR: {{parent.agg_true_positive_rate|number: '.3p'}}, FPR: {{index_fpr|number: '.3p'}}, AUC {{parent.lookup.auc|number: '.3p'}}"
+                  }
+                }
+              }
+            }
+          ]
+        }    
+      ]
+    }
+  ]
+}

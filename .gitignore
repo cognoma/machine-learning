@@ -4,6 +4,9 @@
 # Large downloaded data files
 download/
 
+# Temporary files
+job-lib/
+
 # Mac metadata
 .DS_Store
 
