@@ -1,7 +1,0 @@
-auc,feature_set,partition,legend_index
-0.9305868803685398,full,test,0
-0.9303816224700439,full,train,1
-0.9243085880640466,expressions,test,2
-0.9250938696062881,expressions,train,3
-0.853991714253723,covariates,test,4
-0.8452932437615834,covariates,train,5

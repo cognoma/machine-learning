@@ -16,8 +16,7 @@
   "data": [
     {
       "name": "roc",
-      "url": "jupyter_data/roc_output.csv",
-      "format": {"type": "csv"},
+      "format": {"type": "json"},
       "transform": [
         {
           "type": "aggregate",
@@ -83,8 +82,7 @@
     },
     {
       "name": "legend_auc",
-      "url": "jupyter_data/auc.csv",
-      "format": {"type": "csv"},
+      "format": {"type": "json"},
       "transform": [
         {
           "type": "formula",

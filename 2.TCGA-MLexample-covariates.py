@@ -14,7 +14,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import vega
+from vega import Vega
 import json
 from sklearn import preprocessing
 from sklearn.linear_model import SGDClassifier
@@ -24,6 +24,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import SelectKBest
 from sklearn.decomposition import PCA
+
+from utils import fill_spec_with_data
 
 
 # In[2]:
@@ -234,7 +236,6 @@ metrics_dict = {
 
 # In[20]:
 
-# TODO: do not save intermediate files?
 # Assemble the data for ROC curves
 model_order = ['full', 'expressions', 'covariates']
 
@@ -258,13 +259,13 @@ for model in model_order:
         }))
 auc_output['legend_index'] = range(len(auc_output.index))
 
-roc_output.to_csv('jupyter_data/roc_output.csv', index = False)
-auc_output.to_csv('jupyter_data/auc.csv', index = False)
-
-with open('jupyter_data/roc_vega_spec.json', 'r') as fp:
+with open('vega_specs/roc_vega_spec.json', 'r') as fp:
     vega_spec = json.load(fp)
-    
-vega.Vega(vega_spec)
+
+final_spec = fill_spec_with_data(vega_spec, 
+    {'roc': roc_output, 'legend_auc': auc_output})
+
+Vega(final_spec)
 
 
 # ## What are the classifier coefficients?
