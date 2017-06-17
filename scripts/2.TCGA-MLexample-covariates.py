@@ -6,9 +6,8 @@
 # In[1]:
 
 import os
-import urllib
-import random
-import warnings
+import time
+import datetime
 
 import pandas as pd
 import numpy as np
@@ -16,16 +15,14 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from vega import Vega
 import json
-from sklearn import preprocessing
 from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV, ShuffleSplit
 from sklearn.metrics import roc_auc_score, roc_curve
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.feature_selection import SelectKBest
+from sklearn.pipeline import Pipeline, FeatureUnion
+from sklearn.preprocessing import StandardScaler, FunctionTransformer
 from sklearn.decomposition import PCA
 
-from utils import fill_spec_with_data
+from utils import fill_spec_with_data, get_model_coefficients
 
 
 # In[2]:
@@ -76,146 +73,170 @@ y.head(6)
 
 # In[9]:
 
-# Here are the percentage of tumors with NF1
-y.value_counts(True)
-
-
-# ## Pre-process data set
-# TODO: currently running PCA on both train and test partitions
-
-# In[10]:
-
-# Pre-process expression data for use later
-n_components = 100
-scaled_expression = StandardScaler().fit_transform(expression)
-pca = PCA(n_components).fit(scaled_expression)
-explained_variance = pca.explained_variance_
-expression_pca = pca.transform(scaled_expression)
-expression_pca = pd.DataFrame(expression_pca)
-expression_pca = expression_pca.set_index(expression.index.values)
-
-
-# In[11]:
-
-print('fraction of variance explained: ' + str(pca.explained_variance_ratio_.sum()))
-
-
-# In[12]:
-
-# Create full feature matrix (expression + covariates)
-X = pd.concat([covariates,expression_pca],axis=1)
-print('Gene expression matrix shape: {0[0]}, {0[1]}'.format(expression.shape))
-print('Full feature matrix shape: {0[0]}, {0[1]}'.format(X.shape))
+print('Gene expression matrix shape: {}'.format(expression.shape))
+print('Covariates matrix shape: {}'.format(covariates.shape))
 
 
 # ## Set aside 10% of the data for testing
 
-# In[13]:
+# In[10]:
 
-# Typically, this can only be done where the number of mutations is large enough
-train_index, test_index = next(ShuffleSplit(n_splits=2, test_size=0.1, random_state=0).split(y))
+# Typically, this type of split can only be done 
+# for genes where the number of mutations is large enough
+X = pd.concat([covariates, expression], axis='columns')
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=0)
 
-X_partitions = {
-    'full': {
-        'train': X.ix[train_index], 
-        'test': X.ix[test_index]
-        },
-    'expressions': {
-        'train': expression_pca.ix[train_index], 
-        'test': expression_pca.ix[test_index]
-        },
-    'covariates': {
-        'train': covariates.ix[train_index], 
-        'test': covariates.ix[test_index]
-        }    
-    } 
-
-y_train = y[train_index]
-y_test = y[test_index]
-
-'Size: {:,} features, {:,} training samples, {:,} testing samples'.format(
-    len(X_partitions['full']['train'].columns), 
-    len(X_partitions['full']['train']), 
-    len(X_partitions['full']['test']))
+# Here are the percentage of tumors with TP53
+y.value_counts(True)
 
 
-# ## Define pipeline and Cross validation model fitting
+# ## Feature selection
 
-# In[14]:
+# In[11]:
+
+# Select the feature set for the different models within the pipeline
+n_covariates = len(covariates.columns)
+def select_feature_set_columns(X, feature_set):
+    if feature_set=='expressions': return X[:, n_covariates:]
+    return  X[:, :n_covariates]
+
+# Creates the expression features by standarizing them and running PCA
+# Because the expressions matrix is so large, we preprocess with PCA
+# The amount of variance in the data captured by ~100 components is high
+expression_features = Pipeline([
+    ('select_features', FunctionTransformer(select_feature_set_columns,
+        kw_args={'feature_set': 'expressions'})),
+    ('standardize', StandardScaler()),
+    ('pca', PCA())
+])
+
+# Creates the covariate features by selecting and standardizing them
+covariate_features = Pipeline([
+    ('select_features', FunctionTransformer(select_feature_set_columns,
+        kw_args={'feature_set': 'covariates'})),
+    ('standardize', StandardScaler())
+])
+
+
+# ## Elastic net classifier and model paraemeters
+
+# In[12]:
 
 # Parameter Sweep for Hyperparameters
-param_grid = {
-    'classify__loss': ['log'],
-    'classify__penalty': ['elasticnet'],
-    'classify__alpha': [10 ** x for x in range(-3, 1)],
-    'classify__l1_ratio': [0, 0.2, 0.8, 1],
+n_components_list = [50, 100]
+regularization_alpha_list = [10 ** x for x in range(-3, 1)]
+regularization_l1_ratio = 0.15
+
+param_grids = {
+    'full': {
+        'features__expressions__pca__n_components' : n_components_list,
+        'classify__alpha': regularization_alpha_list
+    },
+    'expressions': {
+        'features__expressions__pca__n_components' : n_components_list,
+        'classify__alpha': regularization_alpha_list
+    },
+    'covariates': {
+        'classify__alpha': regularization_alpha_list
+    }
 }
 
-pipeline = Pipeline(steps=[
-    ('standardize', StandardScaler()),
-    ('classify', SGDClassifier(random_state=0, class_weight='balanced'))
-])
+# Classifier: Elastic Net
+classifier = SGDClassifier(penalty='elasticnet',
+                           l1_ratio=regularization_l1_ratio,
+                           loss='log', 
+                           class_weight='balanced',
+                           random_state=0)
+
+
+# ## Define pipeline and cross validation
+
+# In[13]:
+
+# Full model pipelines
+pipeline_definitions = {
+    'full': Pipeline([
+        ('features', FeatureUnion([
+            ('expressions', expression_features),
+            ('covariates', covariate_features)
+        ])),
+        ('classify', classifier)
+    ]),
+    'expressions': Pipeline([
+        ('features', FeatureUnion([('expressions', expression_features)])),
+        ('classify', classifier)
+    ]),
+    'covariates': Pipeline([
+        ('features', FeatureUnion([('covariates', covariate_features)])),
+        ('classify', classifier)
+    ])
+}
 
 models = ['full', 'expressions', 'covariates']
 
 cv_pipelines = {mod: GridSearchCV(estimator=pipeline, 
-                             param_grid=param_grid, 
-                             n_jobs=1, 
-                             scoring='roc_auc') for mod in models}
+                                  param_grid=param_grids[mod], 
+                                  n_jobs=1, 
+                                  scoring='roc_auc') 
+                for mod, pipeline in pipeline_definitions.items()}
+
+
+# In[14]:
+
+st = time.perf_counter()
+
+# Fit the models
+for model, pipeline in cv_pipelines.items():
+    print('Fitting CV for model: {0}'.format(model))
+    pipeline.fit(X=X_train, y=y_train)
+    
+et = time.perf_counter()
+print('Time to fit models: {0}'.format(str(datetime.timedelta(seconds=et-st))))
 
 
 # In[15]:
 
-get_ipython().run_cell_magic('time', '', "for model, pipeline in cv_pipelines.items():\n    print('Fitting CV for model: {0}'.format(model))\n    pipeline.fit(X=X_partitions.get(model).get('train'), y=y_train)\n# cv_pipeline_full.fit(X=X_train_full, y=y_train)")
-
-
-# In[16]:
-
-# Best Params
+# Best Parameters
 for model, pipeline in cv_pipelines.items():
     print('{0}: {1:.3%}'.format(model, pipeline.best_score_))
 
-    # Best Params
     print(pipeline.best_params_)
 
 
 # ## Visualize hyperparameters performance
 
+# In[16]:
+
+cv_results_df = pd.DataFrame()
+for model, pipeline in cv_pipelines.items():
+    df = pd.concat([
+        pd.DataFrame(pipeline.cv_results_),
+        pd.DataFrame.from_records(pipeline.cv_results_['params'])
+    ], axis='columns')
+    df['feature_set'] = model
+    cv_results_df = cv_results_df.append(df)
+
+
 # In[17]:
 
-cv_results_df_dict = {model: 
-    pd.concat([
-        pd.DataFrame(pipeline.cv_results_),
-        pd.DataFrame.from_records(pipeline.cv_results_['params']),
-    ], axis='columns') for model, pipeline in cv_pipelines.items()}
-
-model = 'full'
-
-cv_results_df_dict[model].head(2)
-
-
-# In[18]:
-
 # Cross-validated performance heatmap
-model = 'full'
-
-cv_score_mat = pd.pivot_table(cv_results_df_dict[model],
+cv_score_mat = pd.pivot_table(cv_results_df,
                               values='mean_test_score', 
-                              index='classify__l1_ratio',
+                              index='feature_set',
                               columns='classify__alpha')
 ax = sns.heatmap(cv_score_mat, annot=True, fmt='.1%')
 ax.set_xlabel('Regularization strength multiplier (alpha)')
-ax.set_ylabel('Elastic net mixing parameter (l1_ratio)');
+ax.set_ylabel('Feature Set');
 
 
-# ## Use Optimal Hyperparameters to Output ROC Curve
+# ## Use optimal hyperparameters to output ROC curve
 
-# In[19]:
+# In[18]:
 
 y_pred_dict = {
     model: {
-        'train': pipeline.decision_function(X_partitions[model]['train']),
-        'test':  pipeline.decision_function(X_partitions[model]['test'])
+        'train': pipeline.decision_function(X_train),
+        'test':  pipeline.decision_function(X_test)
     } for model, pipeline in cv_pipelines.items()
 }
 
@@ -234,7 +255,7 @@ metrics_dict = {
 }
 
 
-# In[20]:
+# In[19]:
 
 # Assemble the data for ROC curves
 model_order = ['full', 'expressions', 'covariates']
@@ -270,7 +291,7 @@ Vega(final_spec)
 
 # ## What are the classifier coefficients?
 
-# In[21]:
+# In[20]:
 
 final_pipelines = {
     model: pipeline.best_estimator_
@@ -281,76 +302,58 @@ final_classifiers = {
     for model, pipeline in final_pipelines.items()
 }
 
+coef_df = pd.concat([
+    get_model_coefficients(classifier, model, covariates.columns)
+    for model, classifier in final_classifiers.items()
+])
+
+
+# In[21]:
+
+print('Signs of the coefficients')
+pd.crosstab(coef_df.feature_set, np.sign(coef_df.weight))
+
 
 # In[22]:
 
-def get_coefficients(classifier, X_mat):
-    coef_df = pd.DataFrame.from_items([
-        ('feature', X_mat.columns),
-        ('weight', classifier.coef_[0]),
-    ])
-
-    coef_df['abs'] = coef_df['weight'].abs()
-    coef_df = coef_df.sort_values('abs', ascending=False)
-    
-    return coef_df
-
-coef_df_dict = {
-    model: get_coefficients(classifier, X_partitions[model]['train'])
-    for model, classifier in final_classifiers.items()
-}
-
-
-# In[23]:
-
-model = 'full'
-
-print('{:.1%} zero coefficients; {:,} negative and {:,} positive coefficients'.format(
-    (coef_df_dict[model].weight == 0).mean(),
-    (coef_df_dict[model].weight < 0).sum(),
-    (coef_df_dict[model].weight > 0).sum()
-))
-coef_df_dict[model].head(10)
+model_coef_df = coef_df[coef_df['feature_set'] == 'full']
+model_coef_df.head(10)
 
 
 # ## Investigate the predictions
 
-# In[24]:
+# In[23]:
 
-model = 'full'
-
-X_all = X_partitions[model]['train'].append(X_partitions[model]['test'])
-X_test_index = X_partitions[model]['test'].index
-y_all = y_train.append(y_test)
-
-predict_df = pd.DataFrame.from_items([
-    ('sample_id', X_all.index),
-    ('testing', X_all.index.isin(X_test_index).astype(int)),
-    ('status', y_all),
-    ('decision_function', final_pipelines[model].decision_function(X_all)),
-    ('probability', final_pipelines[model].predict_proba(X_all)[:, 1])
-])
+predict_df = pd.DataFrame()
+for model, pipeline in final_pipelines.items():
+    df = pd.DataFrame.from_items([
+        ('feature_set', model),
+        ('sample_id', X.index),
+        ('test_set', X.index.isin(X_test.index).astype(int)),
+        ('status', y),
+        ('decision_function', pipeline.decision_function(X)),
+        ('probability', pipeline.predict_proba(X)[:, 1])
+    ])    
+    predict_df = predict_df.append(df)
 
 predict_df['probability_str'] = predict_df['probability'].apply('{:.1%}'.format)
 
 
-# In[25]:
+# In[24]:
 
 # Top predictions amongst negatives (potential hidden responders)
-predict_df.sort_values('decision_function', ascending=False).query("status == 0").head(10)
+model = 'full'
+(predict_df
+    .sort_values('decision_function', ascending=False)
+    .query("status == 0 and feature_set == @model")
+    .head(10)
+)
 
 
-# In[26]:
+# In[25]:
 
-# Ignore numpy warning caused by seaborn
-warnings.filterwarnings('ignore', 'using a non-integer number instead of an integer')
+model_predict_df = predict_df[predict_df['feature_set'] == 'full']
 
-ax = sns.distplot(predict_df.query("status == 0").decision_function, hist=False, label='Negatives')
-ax = sns.distplot(predict_df.query("status == 1").decision_function, hist=False, label='Positives')
-
-
-# In[27]:
-
-ax = sns.distplot(predict_df.query("status == 0").probability, hist=False, label='Negatives')
-ax = sns.distplot(predict_df.query("status == 1").probability, hist=False, label='Positives')
+ax = sns.distplot(model_predict_df.query("status == 0").probability, hist=False, label='Negatives')
+ax = sns.distplot(model_predict_df.query("status == 1").probability, hist=False, label='Positives')
 

@@ -41,7 +41,7 @@ def fill_spec_with_data(spec, data):
     * Uses an incomplete Vega specification that has named data arguments
         which have empty values and replaces those missing values with
         data elements passed in
-   * The Vega specification needs to have named data arguments that match
+    * The Vega specification needs to have named data arguments that match
         the data that is passed in to this function
         
     Args:
@@ -64,3 +64,42 @@ def fill_spec_with_data(spec, data):
         spec['data'][ix]['values'] = df.to_dict(orient='records')
 
     return spec
+
+def get_model_coefficients(classifier, feature_set, covariate_names):
+    """
+    Extract the feature names and associate them with the coefficient values
+    in the final classifier object.
+    * Only works for expressions only model with PCA, covariates only model,
+        and a combined model
+    * Assumes the PCA features come before any covariates that are included
+    * Sorts the final dataframe by the absolute value of the coefficients
+    
+    Args:
+        classifier: the final sklearn classifier object 
+        feature_set: string of the model's name {expressions, covariates, full}
+        covariate_names: list of the names of the covariate features matrix
+    
+    Returns:
+        pandas.DataFrame: mapping of feature name to coefficient value
+    """
+    import pandas as pd
+    import numpy as np
+    
+    coefs = classifier.coef_[0]   
+    
+    if feature_set=='expressions':
+        features = ['PCA_%d' %cf for cf in range(len(coefs))]
+    elif feature_set=='covariates': 
+        features = covariate_names
+    else:        
+        features = ['PCA_%d' %cf for cf in range(len(coefs) - len(covariate_names))]
+        features.extend(covariate_names)
+     
+    coef_df = pd.DataFrame({'feature': features, 'weight': coefs})  
+        
+    coef_df['abs'] = coef_df['weight'].abs()
+    coef_df = coef_df.sort_values('abs', ascending=False)
+    coef_df['feature_set'] = feature_set
+    
+    
+    return coef_df
