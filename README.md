@@ -10,7 +10,7 @@ With conda, you can create the `cognoma-machine-learning` environment by running
 
 ```sh
 # Create or overwrite the cognoma-machine-learning conda environment
-conda env create --quiet --force --file environment.yml
+conda env create --file environment.yml
 ```
 
 If `environment.yml` has changed since you created the environment, run the following update command:
