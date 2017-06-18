@@ -2,6 +2,20 @@
 
 This repository hosts machine learning code and discussion (see [Issues](https://github.com/cognoma/machine-learning/issues)) for Project Cognoma.
 
+## Notebooks
+
+The following notebooks implement the primary machine learning workflow for Cognoma:
+
++ [`1.download.ipynb`](1.download.ipynb): downloads the cancer datasets.
++ [`2.mutation-classifier.ipynb`](2.mutation-classifier.ipynb): builds a classifier for mutation in a given gene.
++ [`3.pathway-classifier.ipynb`](3.pathway-classifier.ipynb): builds a classifier for mutation in any gene for a given pathway.
+
+If you've modified a notebook and are submitting a pull request, then export the notebooks to scripts:
+
+```sh
+jupyter nbconvert --to=script --FilesWriter.build_directory=scripts *.ipynb
+```
+
 ## Environment
 
 This repository uses [conda](http://conda.pydata.org/docs/ "Conda package management system and environment management system documentation") to manage its environment and install packages.
