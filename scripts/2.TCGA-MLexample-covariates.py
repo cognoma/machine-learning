@@ -5,22 +5,22 @@
 
 # In[1]:
 
+import datetime
+import json
 import os
 import time
-import datetime
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from vega import Vega
-import json
+from sklearn.decomposition import PCA
 from sklearn.linear_model import SGDClassifier
-from sklearn.model_selection import train_test_split, GridSearchCV, ShuffleSplit
 from sklearn.metrics import roc_auc_score, roc_curve
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.preprocessing import StandardScaler, FunctionTransformer
-from sklearn.decomposition import PCA
+from vega import Vega
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
 
 from utils import fill_spec_with_data, get_model_coefficients
 
@@ -36,7 +36,7 @@ plt.style.use('seaborn-notebook')
 # In[3]:
 
 # We're going to be building a 'TP53' classifier 
-GENE = '7157' # TP53
+mutation_id = '7157' # TP53
 
 
 # *Here is some [documentation](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html) regarding the classifier and hyperparameters*
@@ -47,43 +47,45 @@ GENE = '7157' # TP53
 
 # In[4]:
 
-get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'expression-matrix.tsv.bz2')\nexpression = pd.read_table(path, index_col=0)")
+get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'expression-matrix.tsv.bz2')\nexpression_df = pd.read_table(path, index_col=0)")
 
 
 # In[5]:
 
-get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'mutation-matrix.tsv.bz2')\nY = pd.read_table(path, index_col=0)")
+get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'mutation-matrix.tsv.bz2')\nmutation_df = pd.read_table(path, index_col=0)")
 
 
 # In[6]:
 
-get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'covariates.tsv')\ncovariates = pd.read_table(path, index_col=0)\n\n# Select acronym_x and n_mutations_log1p covariates only\nselected_cols = [col for col in covariates.columns if 'acronym_' in col]\nselected_cols.append('n_mutations_log1p')\ncovariates = covariates[selected_cols]")
+path = os.path.join('download', 'covariates.tsv')
+covariate_df = pd.read_table(path, index_col=0)
+
+# Select acronym_x and n_mutations_log1p covariates only
+selected_cols = [col for col in covariate_df.columns if col.startswith('acronym_')]
+selected_cols.append('n_mutations_log1p')
+covariate_df = covariate_df[selected_cols]
 
 
 # In[7]:
 
-y = Y[GENE]
+# The series holds TP53 Mutation Status for each sample
+y = mutation_df[mutation_id]
+y.head(6)
 
 
 # In[8]:
 
-# The Series now holds TP53 Mutation Status for each Sample
-y.head(6)
-
-
-# In[9]:
-
-print('Gene expression matrix shape: {}'.format(expression.shape))
-print('Covariates matrix shape: {}'.format(covariates.shape))
+print('Gene expression matrix shape: {}'.format(expression_df.shape))
+print('Covariates matrix shape: {}'.format(covariate_df.shape))
 
 
 # ## Set aside 10% of the data for testing
 
-# In[10]:
+# In[9]:
 
 # Typically, this type of split can only be done 
 # for genes where the number of mutations is large enough
-X = pd.concat([covariates, expression], axis='columns')
+X = pd.concat([covariate_df, expression_df], axis='columns')
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=0)
 
 # Here are the percentage of tumors with TP53
@@ -92,13 +94,18 @@ y.value_counts(True)
 
 # ## Feature selection
 
-# In[11]:
+# In[10]:
 
-# Select the feature set for the different models within the pipeline
-n_covariates = len(covariates.columns)
 def select_feature_set_columns(X, feature_set):
-    if feature_set=='expressions': return X[:, n_covariates:]
-    return  X[:, :n_covariates]
+    """
+    Select the feature set for the different models within the pipeline
+    """
+    n_covariates = len(covariate_df.columns)
+    if feature_set == 'covariates':
+        return X[:, :n_covariates]
+    if feature_set == 'expressions':
+        return X[:, n_covariates:]
+    raise ValueError('feature_set not supported: {}'.format(feature_set))
 
 # Creates the expression features by standarizing them and running PCA
 # Because the expressions matrix is so large, we preprocess with PCA
@@ -120,7 +127,7 @@ covariate_features = Pipeline([
 
 # ## Elastic net classifier and model paraemeters
 
-# In[12]:
+# In[11]:
 
 # Parameter Sweep for Hyperparameters
 n_components_list = [50, 100]
@@ -151,7 +158,7 @@ classifier = SGDClassifier(penalty='elasticnet',
 
 # ## Define pipeline and cross validation
 
-# In[13]:
+# In[12]:
 
 # Full model pipelines
 pipeline_definitions = {
@@ -181,31 +188,30 @@ cv_pipelines = {mod: GridSearchCV(estimator=pipeline,
                 for mod, pipeline in pipeline_definitions.items()}
 
 
-# In[14]:
-
-st = time.perf_counter()
+# In[13]:
 
 # Fit the models
 for model, pipeline in cv_pipelines.items():
     print('Fitting CV for model: {0}'.format(model))
+    start_time = time.perf_counter()
     pipeline.fit(X=X_train, y=y_train)
-    
-et = time.perf_counter()
-print('Time to fit models: {0}'.format(str(datetime.timedelta(seconds=et-st))))
+    end_time = time.perf_counter()
+    elapsed = datetime.timedelta(seconds=end_time - start_time)
+    print('\truntime: {}'.format(elapsed))
 
 
-# In[15]:
+# In[14]:
 
 # Best Parameters
 for model, pipeline in cv_pipelines.items():
-    print('{0}: {1:.3%}'.format(model, pipeline.best_score_))
-
+    print('#', model)
     print(pipeline.best_params_)
+    print('cv_auroc = {:.3%}'.format(pipeline.best_score_))
 
 
 # ## Visualize hyperparameters performance
 
-# In[16]:
+# In[15]:
 
 cv_results_df = pd.DataFrame()
 for model, pipeline in cv_pipelines.items():
@@ -217,7 +223,7 @@ for model, pipeline in cv_pipelines.items():
     cv_results_df = cv_results_df.append(df)
 
 
-# In[17]:
+# In[16]:
 
 # Cross-validated performance heatmap
 cv_score_mat = pd.pivot_table(cv_results_df,
@@ -231,7 +237,7 @@ ax.set_ylabel('Feature Set');
 
 # ## Use optimal hyperparameters to output ROC curve
 
-# In[18]:
+# In[17]:
 
 y_pred_dict = {
     model: {
@@ -255,7 +261,7 @@ metrics_dict = {
 }
 
 
-# In[19]:
+# In[18]:
 
 # Assemble the data for ROC curves
 model_order = ['full', 'expressions', 'covariates']
@@ -291,7 +297,7 @@ Vega(final_spec)
 
 # ## What are the classifier coefficients?
 
-# In[20]:
+# In[19]:
 
 final_pipelines = {
     model: pipeline.best_estimator_
@@ -303,26 +309,29 @@ final_classifiers = {
 }
 
 coef_df = pd.concat([
-    get_model_coefficients(classifier, model, covariates.columns)
+    get_model_coefficients(classifier, model, covariate_df.columns)
     for model, classifier in final_classifiers.items()
 ])
 
 
+# In[20]:
+
+# Signs of the coefficients by model
+pd.crosstab(coef_df.feature_set, np.sign(coef_df.weight).rename('coefficient_sign'))
+
+
 # In[21]:
 
-print('Signs of the coefficients')
-pd.crosstab(coef_df.feature_set, np.sign(coef_df.weight))
-
-
-# In[22]:
-
-model_coef_df = coef_df[coef_df['feature_set'] == 'full']
-model_coef_df.head(10)
+# Top standardized coefficients
+(coef_df
+    .query("feature_set == 'full'")
+    .head(10)
+)
 
 
 # ## Investigate the predictions
 
-# In[23]:
+# In[22]:
 
 predict_df = pd.DataFrame()
 for model, pipeline in final_pipelines.items():
@@ -339,21 +348,19 @@ for model, pipeline in final_pipelines.items():
 predict_df['probability_str'] = predict_df['probability'].apply('{:.1%}'.format)
 
 
-# In[24]:
+# In[23]:
 
-# Top predictions amongst negatives (potential hidden responders)
-model = 'full'
+# Top predictions amongst negatives (potential hidden responders to a targeted cancer therapy)
 (predict_df
     .sort_values('decision_function', ascending=False)
-    .query("status == 0 and feature_set == @model")
+    .query("status == 0 and feature_set == 'full'")
     .head(10)
 )
 
 
-# In[25]:
+# In[24]:
 
-model_predict_df = predict_df[predict_df['feature_set'] == 'full']
-
+model_predict_df = predict_df.query("feature_set == 'full'")
 ax = sns.distplot(model_predict_df.query("status == 0").probability, hist=False, label='Negatives')
 ax = sns.distplot(model_predict_df.query("status == 1").probability, hist=False, label='Positives')
 
