@@ -13,7 +13,7 @@ import time
 from sklearn.decomposition import PCA
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import roc_auc_score, roc_curve
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import train_test_split, GridSearchCV, StratifiedKFold
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.preprocessing import StandardScaler, FunctionTransformer
 from vega import Vega
@@ -179,13 +179,18 @@ pipeline_definitions = {
     ])
 }
 
-models = ['full', 'expressions', 'covariates']
-
-cv_pipelines = {mod: GridSearchCV(estimator=pipeline, 
-                                  param_grid=param_grids[mod], 
-                                  n_jobs=1, 
-                                  scoring='roc_auc') 
-                for mod, pipeline in pipeline_definitions.items()}
+# Construct cross-validated grid searches
+cv_pipelines = dict()
+for model, pipeline in pipeline_definitions.items():
+    cv = StratifiedKFold(n_splits=3, random_state=0)
+    grid_search = GridSearchCV(
+        estimator=pipeline,
+        param_grid=param_grids[model],
+        cv=cv,
+        n_jobs=1, 
+        scoring='roc_auc',
+    )
+    cv_pipelines[model] = grid_search
 
 
 # In[13]:
