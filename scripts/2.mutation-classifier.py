@@ -23,7 +23,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-from utils import fill_spec_with_data, get_model_coefficients
+from utils import fill_spec_with_data, get_model_coefficients, get_genes_coefficients
 
 
 # In[2]:
@@ -58,6 +58,11 @@ get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'mutat
 
 # In[6]:
 
+get_ipython().run_cell_magic('time', '', "path = os.path.join('download', 'expression-genes.tsv')\nexpression_genes_df = pd.read_table(path, index_col=0)")
+
+
+# In[7]:
+
 path = os.path.join('download', 'covariates.tsv')
 covariate_df = pd.read_table(path, index_col=0)
 
@@ -67,14 +72,14 @@ selected_cols.append('n_mutations_log1p')
 covariate_df = covariate_df[selected_cols]
 
 
-# In[7]:
+# In[8]:
 
 # The series holds TP53 Mutation Status for each sample
 y = mutation_df[mutation_id]
 y.head(6)
 
 
-# In[8]:
+# In[9]:
 
 print('Gene expression matrix shape: {}'.format(expression_df.shape))
 print('Covariates matrix shape: {}'.format(covariate_df.shape))
@@ -82,7 +87,7 @@ print('Covariates matrix shape: {}'.format(covariate_df.shape))
 
 # ## Set aside 10% of the data for testing
 
-# In[9]:
+# In[10]:
 
 # Typically, this type of split can only be done 
 # for genes where the number of mutations is large enough
@@ -95,7 +100,7 @@ y.value_counts(True)
 
 # ## Feature selection
 
-# In[10]:
+# In[11]:
 
 def select_feature_set_columns(X, feature_set):
     """
@@ -128,7 +133,7 @@ covariate_features = Pipeline([
 
 # ## Elastic net classifier and model paraemeters
 
-# In[11]:
+# In[12]:
 
 # Parameter Sweep for Hyperparameters
 n_components_list = [50, 100]
@@ -159,7 +164,7 @@ classifier = SGDClassifier(penalty='elasticnet',
 
 # ## Define pipeline and cross validation
 
-# In[12]:
+# In[13]:
 
 # Full model pipelines
 pipeline_definitions = {
@@ -194,7 +199,7 @@ for model, pipeline in pipeline_definitions.items():
     cv_pipelines[model] = grid_search
 
 
-# In[13]:
+# In[14]:
 
 # Fit the models
 for model, pipeline in cv_pipelines.items():
@@ -206,7 +211,7 @@ for model, pipeline in cv_pipelines.items():
     print('\truntime: {}'.format(elapsed))
 
 
-# In[14]:
+# In[15]:
 
 # Best Parameters
 for model, pipeline in cv_pipelines.items():
@@ -217,7 +222,7 @@ for model, pipeline in cv_pipelines.items():
 
 # ## Visualize hyperparameters performance
 
-# In[15]:
+# In[16]:
 
 cv_results_df = pd.DataFrame()
 for model, pipeline in cv_pipelines.items():
@@ -229,7 +234,7 @@ for model, pipeline in cv_pipelines.items():
     cv_results_df = cv_results_df.append(df)
 
 
-# In[16]:
+# In[17]:
 
 # Cross-validated performance heatmap
 cv_score_mat = pd.pivot_table(cv_results_df,
@@ -243,7 +248,7 @@ ax.set_ylabel('Feature Set');
 
 # ## Use optimal hyperparameters to output ROC curve
 
-# In[17]:
+# In[18]:
 
 y_pred_dict = {
     model: {
@@ -267,7 +272,7 @@ metrics_dict = {
 }
 
 
-# In[18]:
+# In[19]:
 
 # Assemble the data for ROC curves
 model_order = ['full', 'expressions', 'covariates']
@@ -303,7 +308,7 @@ Vega(final_spec)
 
 # ## What are the classifier coefficients?
 
-# In[19]:
+# In[20]:
 
 final_pipelines = {
     model: pipeline.best_estimator_
@@ -320,24 +325,74 @@ coef_df = pd.concat([
 ])
 
 
-# In[20]:
+# In[21]:
 
 # Signs of the coefficients by model
 pd.crosstab(coef_df.feature_set, np.sign(coef_df.weight).rename('coefficient_sign'))
 
 
-# In[21]:
+# ### Top coefficients for covariates model
 
-# Top standardized coefficients
-(coef_df
-    .query("feature_set == 'full'")
-    .head(10)
-)
+# In[22]:
+
+coef_df.query("feature_set == 'covariates'").head(10)
+
+
+# ### Top coefficients for full model
+
+# In[23]:
+
+coef_df.query("feature_set == 'full'").head(10)
+
+
+# ### Top coefficients for individual _genes_ for full model
+
+# In[24]:
+
+pca_for_full = (
+    final_pipelines['full']
+    .named_steps['features']
+    .get_params()['expressions__pca']
+    )
+classifier_for_full = (
+    final_pipelines['full']
+    .named_steps['classify']
+    )
+gene_coefficients_for_full = get_genes_coefficients(
+    pca_object=pca_for_full,
+    classifier_object=classifier_for_full,
+    expression_df=expression_df,
+    expression_genes_df=expression_genes_df,
+    num_covariates=len(covariate_df.columns)
+    )
+gene_coefficients_for_full.head(10)
+
+
+# ### Top coefficients for individual _genes_ for expressions model
+
+# In[25]:
+
+pca_for_expression = (
+    final_pipelines['expressions']
+    .named_steps['features']
+    .get_params()['expressions__pca']
+    )
+classifier_for_expression = (
+    final_pipelines['expressions']
+    .named_steps['classify']
+    )
+gene_coefficients_for_expression = get_genes_coefficients(
+    pca_object=pca_for_expression,
+    classifier_object=classifier_for_expression,
+    expression_df=expression_df,
+    expression_genes_df=expression_genes_df
+    )
+gene_coefficients_for_expression.head(10)
 
 
 # ## Investigate the predictions
 
-# In[22]:
+# In[26]:
 
 predict_df = pd.DataFrame()
 for model, pipeline in final_pipelines.items():
@@ -354,7 +409,7 @@ for model, pipeline in final_pipelines.items():
 predict_df['probability_str'] = predict_df['probability'].apply('{:.1%}'.format)
 
 
-# In[23]:
+# In[27]:
 
 # Top predictions amongst negatives (potential hidden responders to a targeted cancer therapy)
 (predict_df
@@ -364,7 +419,7 @@ predict_df['probability_str'] = predict_df['probability'].apply('{:.1%}'.format)
 )
 
 
-# In[24]:
+# In[28]:
 
 model_predict_df = predict_df.query("feature_set == 'full'")
 ax = sns.distplot(model_predict_df.query("status == 0").probability, hist=False, label='Negatives')
