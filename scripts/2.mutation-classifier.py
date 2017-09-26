@@ -5,7 +5,6 @@
 
 # In[1]:
 
-
 import datetime
 import os
 import time
@@ -26,14 +25,12 @@ from utils import get_model_coefficients, get_genes_coefficients, theme_cognoma
 
 # In[2]:
 
-
 get_ipython().magic('matplotlib inline')
 
 
 # ## Specify model configuration
 
 # In[3]:
-
 
 # We're going to be building a classifier with multiple genes filtered by two diseases 
 # Example:
@@ -60,12 +57,11 @@ print("Diseases: " + str(disease_acronyms))
 
 # *Here is some [documentation](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html) regarding the classifier and hyperparameters*
 # 
-# *Here is some [information](https://ghr.nlm.nih.gov/gene/TP53) about TP53*
+# *Here is some [information](https://ghr.nlm.nih.gov/gene) about the genes*
 
 # ## Load Data
 
 # In[4]:
-
 
 path = os.path.join('download', 'expression-matrix.tsv.bz2')
 expression_df = pd.read_table(path, index_col=0)
@@ -82,7 +78,6 @@ expression_genes_df = pd.read_table(path, index_col=0)
 
 # In[5]:
 
-
 # Select acronym_x and n_mutations_log1p covariates only
 disease_cols = [col for col in covariate_df.columns if col.startswith('acronym_')]
 
@@ -96,7 +91,6 @@ covariate_df = covariate_df[selected_cols]
 
 # In[6]:
 
-
 # Filter the rows by disease type
 # subsection of columns with row-wise max
 has_disease = covariate_df[disease_cols].max(axis=1) > 0
@@ -104,7 +98,6 @@ covariate_df = covariate_df[has_disease]
 
 
 # In[7]:
-
 
 # filter by sample_id
 expression_df = expression_df[expression_df.index.isin(covariate_df.index)]
@@ -115,7 +108,6 @@ mutation_df = mutation_df[mutation_df.index.isin(covariate_df.index)]
 
 # In[8]:
 
-
 # The series holds Gene Mutation Status for each sample
 # Take max of mutation status, meaning if any of the genes mutated the value should be 1
 y = mutation_df[gene_ids].max(axis=1)
@@ -123,7 +115,6 @@ y.head(6)
 
 
 # In[9]:
-
 
 print('Gene expression matrix shape: {}'.format(expression_df.shape))
 print('Covariates matrix shape: {}'.format(covariate_df.shape))
@@ -133,11 +124,10 @@ print('Covariates matrix shape: {}'.format(covariate_df.shape))
 
 # In[10]:
 
-
 # Typically, this type of split can only be done 
 # for genes where the number of mutations is large enough
 X = pd.concat([covariate_df, expression_df], axis='columns')
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, test_size=0.1, random_state=0)
 
 # Here are the percentage of tumors with TP53
 y.value_counts(True)
@@ -146,7 +136,6 @@ y.value_counts(True)
 # ## Feature selection
 
 # In[11]:
-
 
 def select_feature_set_columns(X, feature_set):
     """
@@ -181,11 +170,16 @@ covariate_features = Pipeline([
 
 # In[12]:
 
-
 # Parameter Sweep for Hyperparameters
-n_components_list = [50, 100]
-regularization_alpha_list = [10 ** x for x in range(-3, 1)]
-regularization_l1_ratio = 0.15
+regularization_alpha_list = [10 ** x for x in range(-10, 10)]
+# Chose n_components based on number of positives (or negatives, if that is less)
+min_class_size = min(y.sum(), len(y) - y.sum())
+if min_class_size > 500:
+    n_components_list = [100]
+elif min_class_size > 250:
+    n_components_list = [50]
+else:
+    n_components_list = [30]
 
 param_grids = {
     'full': {
@@ -203,7 +197,7 @@ param_grids = {
 
 # Classifier: Elastic Net
 classifier = SGDClassifier(penalty='elasticnet',
-                           l1_ratio=regularization_l1_ratio,
+                           l1_ratio=0,
                            loss='log', 
                            class_weight='balanced',
                            random_state=0)
@@ -212,7 +206,6 @@ classifier = SGDClassifier(penalty='elasticnet',
 # ## Define pipeline and cross validation
 
 # In[13]:
-
 
 # Full model pipelines
 pipeline_definitions = {
@@ -249,7 +242,6 @@ for model, pipeline in pipeline_definitions.items():
 
 # In[14]:
 
-
 # Fit the models
 for model, pipeline in cv_pipelines.items():
     print('Fitting CV for model: {0}'.format(model))
@@ -262,7 +254,6 @@ for model, pipeline in cv_pipelines.items():
 
 # In[15]:
 
-
 # Best Parameters
 for model, pipeline in cv_pipelines.items():
     print('#', model)
@@ -273,7 +264,6 @@ for model, pipeline in cv_pipelines.items():
 # ## Visualize hyperparameters performance
 
 # In[16]:
-
 
 cv_results_df = pd.DataFrame()
 for model, pipeline in cv_pipelines.items():
@@ -292,7 +282,6 @@ cv_results_summary = (cv_results_df
 
 # In[17]:
 
-
 (gg.ggplot(cv_results_summary, gg.aes(x='classify__alpha',
                                       y='mean_test_score',
                                       color='feature_set'))
@@ -309,7 +298,6 @@ cv_results_summary = (cv_results_df
 # ## Use optimal hyperparameters to output ROC curve
 
 # In[18]:
-
 
 y_pred_dict = {
     model: {
@@ -334,7 +322,6 @@ metrics_dict = {
 
 
 # In[19]:
-
 
 # Assemble the data for ROC curves
 model_order = ['full', 'expressions', 'covariates']
@@ -372,7 +359,6 @@ for model in model_order:
 
 # In[20]:
 
-
 pd.pivot_table(auc_output,
                values='auc',
                index='feature_set',
@@ -382,7 +368,6 @@ pd.pivot_table(auc_output,
 # ## What are the classifier coefficients?
 
 # In[21]:
-
 
 final_pipelines = {
     model: pipeline.best_estimator_
@@ -401,7 +386,6 @@ coef_df = pd.concat([
 
 # In[22]:
 
-
 # Signs of the coefficients by model
 pd.crosstab(coef_df.feature_set, np.sign(coef_df.weight).rename('coefficient_sign'))
 
@@ -410,14 +394,12 @@ pd.crosstab(coef_df.feature_set, np.sign(coef_df.weight).rename('coefficient_sig
 
 # In[23]:
 
-
 coef_df.query("feature_set == 'full'").head(10)
 
 
 # ### Top coefficients for individual _genes_ for full model
 
 # In[24]:
-
 
 pca_for_full = (
     final_pipelines['full']
@@ -442,7 +424,6 @@ gene_coefficients_for_full.head(10)
 
 # In[25]:
 
-
 pca_for_expression = (
     final_pipelines['expressions']
     .named_steps['features']
@@ -465,7 +446,6 @@ gene_coefficients_for_expression.head(10)
 
 # In[26]:
 
-
 predict_df = pd.DataFrame()
 for model, pipeline in final_pipelines.items():
     df = pd.DataFrame.from_items([
@@ -483,7 +463,6 @@ predict_df['probability_str'] = predict_df['probability'].apply('{:.1%}'.format)
 
 # In[27]:
 
-
 # Top predictions amongst negatives (potential hidden responders to a targeted cancer therapy)
 (predict_df
     .sort_values('decision_function', ascending=False)
@@ -493,7 +472,6 @@ predict_df['probability_str'] = predict_df['probability'].apply('{:.1%}'.format)
 
 
 # In[28]:
-
 
 predict_df['status_'] = predict_df['status'].map(
     lambda x: 'negative' if x == 0 else 'positive')
