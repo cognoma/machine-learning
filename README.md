@@ -2,6 +2,11 @@
 
 This repository hosts machine learning code and discussion (see [Issues](https://github.com/cognoma/machine-learning/issues)) for Project Cognoma.
 
+## *NOTE: This repository is no longer up-to-date with the web application*
+
+The production notebook that is served to website users can be found in the [ml-workers repository](https://github.com/cognoma/ml-workers/blob/master/notebooks/2.mutation-classifier.ipynb).
+This repository will be used for continued data exploration and new modeling approaches.
+
 ## Notebooks
 
 The following notebooks implement the primary machine learning workflow for Cognoma:
